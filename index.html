@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./icons/css/all.css">
+    <title>Ser Crypto - Home</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+        <a class="header__logo glitch" data-text="Ser Crypto" href="./index.html">
+            <h1>Ser Crypto</h1>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="desplegar">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="./pages/noticias.html">NOTICIAS</a>
+            <a href="./pages/coins.html">TOKENS</a>
+            <a href="./pages/nfts.html">NFTs</a>
+            <a href="./pages/equipo.html">EQUIPO</a>
+            <a href="./pages/contacto.html">CONTACTANOS</a>
+            <label for="check" class="cerrar">
+                &#215
+            </label>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Banner -->
+
+        <section class="banner">
+            <div class="banner__contenido">
+                <h2 class="banner__title">TODO LO QUE NECESITAS SABER DE TUS <span class="italic"> CRYPTOS
+                        FAVORITAS</span></h2>
+                <p class="banner__paragraph">Noticias, Estadisticas, Opinion y <span class="bold ">MUCHO MAS</span></p>
+            </div>
+        </section>
+
+        <!-- Primer seccion -->
+
+        <h2 class="cryptos__titulo">Los Más Buscados</h2>
+        <section id="cryptos" class="cryptos">
+
+            <div class="cryptos__contenedor">
+                <a href="#">
+                    <img class="icono-crypto" src="./multimedia/btc.png" alt="btc">
+                    <h3 class="crypto-texto">BTC</h3>
+                </a>
+            </div>
+            <div class="cryptos__contenedor">
+                <a href="#">
+                    <img class="icono-crypto" src="./multimedia/eth.png" alt="eth">
+                    <h3 class="crypto-texto">ETH</h3>
+                </a>
+            </div>
+            <div class="cryptos__contenedor">
+                <a href="#">
+                    <img class="icono-crypto" src="./multimedia/usdt.png" alt="usdt">
+                    <h3 class="crypto-texto">USDT</h3>
+                </a>
+            </div>
+            <div class="cryptos__contenedor">
+                <a href="#">
+                    <img class="icono-crypto" src="./multimedia/rvn.png" alt="rvn">
+                    <h3 class="crypto-texto">RVN</h3>
+                </a>
+            </div>
+            <div class="cryptos__contenedor">
+                <a href="#">
+                    <img class="icono-crypto" src="./multimedia/dot.png" alt="dot">
+                    <h3 class="crypto-texto">DOT</h3>
+                </a>
+            </div>
+            <div class="cryptos__contenedor">
+                <a href="#">
+                    <img class="icono-crypto" src="./multimedia/bnb.png" alt="bnb">
+                    <h3 class="crypto-texto">BNB</h3>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Segunda seccion -->
+
+        <section class="noticias">
+            <h3 class="noticias__titulo">Últimas Noticias</h3>
+            <div class="noticias__articulos">
+                <article class="noticia-secundaria carrusel">
+                    <h4 class="autor">Joel Garrison</h4>
+                    <a class="twiter-tag" href="#twiter">@joelsabedecryptos</a>
+                    <p>A más de un año del Merge, Ethereum sigue perdiendo popularidad.</p>
+                    <h5 class="fecha">20:22 Hs / Dec 21, 2023</h5>
+                </article>
+                <article class="noticia-principal carrusel">
+                    <h4 class="autor">Tiago Etcheverry</h4>
+                    <a class="twiter-tag" href="#twiter">@tiagoousdev</a>
+                    <p>Bitcoin podría alcanzar un nuevo máximo histórico en las próximas semanas.</p>
+                    <h5 class="fecha">23:23 Hs / Dec 21, 2023</h5>
+                </article>
+                <article class="noticia-secundaria carrusel">
+                    <h4 class="autor">Monica Rosales</h4>
+                    <a class="twiter-tag" href="#twiter">@monyrosales</a>
+                    <p>Las Altcoins reaccionan positivamente a las nuevas proyecciones de inflación en EEUU.</p>
+                    <h5 class="fecha">15:47 Hs / Dec 21, 2023</h5>
+                </article>
+                <!-- <article>
+                    <figure>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qEbC27i-UKA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </figure>
+                </article> -->
+            </div>
+        </section>
+        <section class="grafico">
+            <img src="./multimedia/chart.png" alt="grafico">
+        </section>
+        <section>
+            <h3 class="titulo-nft">TOP COLECCIONES</h3>
+            <div class="nft">
+                <img src="./multimedia/nfts.png" alt="">
+                <div>
+                    <img class="nft2" src="./multimedia/nfts 2.png" alt=""><span class="coleccion-titulo">Bored Ape
+                        Yacht Club</span>
+                    <img class="nft3" src="./multimedia/nfts 3.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="formulario__contenedor">
+            <h4 class="formulario__titulo">Dejanos tu mensaje!</h4>
+            <form class="contactanos" action="">
+                <div class="datos-form">
+                    <div class="entrada">
+                        <input class="input" type="text"  id="nombre" required>
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="entrada">
+                        <input class="input" type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="entrada">
+                    <textarea class="input" id="mensaje" cols="30" rows="10" required></textarea>
+                    <label for="mensaje">Tu Mensaje</label>
+                </div>
+                    <input class="btn" type="submit" value="Enviar">
+            </form>
+        </section>
+        <hr>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <ul class="redes">
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#youtube" class="s-n__link">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#twiter" class="s-n__link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#instagram" class="s-n__link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#facebook" class="s-n__link">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#tiktok" class="s-n__link">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#reddit" class="s-n__link">
+                                <i class="fa-brands fa-reddit"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#github" class="s-n__link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="s-n">
+                    <div class="background"></div>
+                    <div class="glass">
+                        <li>
+                            <a href="#whatsapp" class="s-n__link">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+            <div class="subscribe">
+
+            </div>
+        </div>
+        <hr>
+        <ul class="footer-list">
+            <li><a href="./pages/noticias.html">NOTICIAS</a></li>
+            <li><a href="./pages/coins.html">TOKENS</a></li>
+            <li><a href="./pages/nfts.html">NFTs</a></li>
+            <li><a href="./pages/equipo.html">EQUIPO</a></li>
+            <li><a href="./pages/contacto.html">CONTACTANOS</a></li>
+        </ul>
+        <p>Carmen de Patagones CP 8504, Prov. de Bs As, Argentina.</p>
+        <p>&copy; 2023 Ser Crypto. Todos los derechos reservados.</p>
+        <h5>powered by tiagoousdev &reg;</h5>
+    </footer>
+
+</body>
+
+</html>

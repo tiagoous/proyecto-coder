@@ -1,0 +1,603 @@
+/* ...........---RESET CSS---........... */
+
+/* ...........---FONT FAMILY SOURCE---........... */
+
+@font-face {
+    font-family: "Tusker Grotesk";
+    src: url("../fonts/TuskerGrotesk-5500Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Tusker Grotesk Light";
+    src: url("../fonts/TuskerGrotesk-2600Semibold.ttf") format("truetype");
+}
+
+/* ...........---CUSTOM PROPERTIES---........... */
+
+:root {
+    /* ...........---COLORES---........... */
+
+    --color-primario: #8447ff;
+    --color-secundario: #8cffda;
+    --color-terceario: #ff36ab;
+    --color-cuaternario: #fcd72c;
+    --color-dark-mode: #ffffff;
+    /* ...........---TIPOGRAFIAS---........... */
+
+    --font-principal: "Tusker Grotesk", Arial, sans-serif;
+    --font-secundaria: "Tusker Grotesk Light";
+}
+
+/* ...........---MODO OSCURO---........... */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primario: #8cffda;
+        --color-secundario: #8447ff;
+        --color-terceario: #fcd72c;
+        --color-cuaternario: #ff36ab;
+        --color-dark-mode: #444444;
+    }
+}
+
+/* ...........---PADDINGS Y MARGINS GENERALES---........... */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primario) var(--color-secundario);
+}
+
+
+/* ...........---ANCLAS SUAVES---........... */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ...........---FIN DEL RESET---........... */
+
+body {
+    background: var(--color-dark-mode);
+}
+
+/* ------...Header...------ */
+
+.header {
+    height: 100px;
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    font-family: var(--font-principal);
+    font-size: 2.5rem;
+    color: var(--color-terceario);
+    text-decoration: none;
+}
+
+.menu a {
+    font-family: var(--font-secundaria);
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    padding: 0 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.desplegar,
+.cerrar {
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+.desplegar {
+    order: 1;
+}
+
+.menu a:hover,
+.desplegar:hover,
+.cerrar:hover, 
+a:hover    {
+    color: var(--color-terceario);
+}
+
+#check {
+    display: none;
+}
+
+/* ------...Banner...------ */
+
+.banner {
+    background-image: url(../multimedia/portada2.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.banner::before {
+    content: "";
+    background: rgba(70, 70, 90, .4);
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    left: 0;
+}
+
+.banner__contenido {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.banner__title {
+    font-family: var(--font-principal);
+    width: 50vw;
+    color: var(--color-cuaternario);
+    line-height: 1.4em;
+    font-size: 5rem;
+}
+
+.banner__paragraph {
+    width: 30vw;
+    color: var(--color-terceario);
+    font-family: var(--font-secundaria);
+    font-size: 6rem;
+    line-height: 1.4em;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* ------...Primer seccion...------ */
+
+.cryptos__titulo {
+    font-family: var(--font-principal);
+    color: var(--color-terceario);
+    text-align: center;
+    padding-top: 30px;
+    font-size: 4rem;
+}
+
+#cryptos {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cryptos__contenedor {
+    padding: 20px 20px;
+    border-radius: 10%;
+    border: 1px solid transparent;
+    margin: 10px;
+}
+
+.cryptos__contenedor:hover {
+    background: var(--color-cuaternario);
+    transition: .8s;
+}
+
+.cryptos__contenedor a {
+    text-decoration: none;
+}
+
+.icono-crypto {
+    width: 9vw;
+}
+
+.crypto-texto {
+    font-family: var(--font-secundaria);
+    font-size: 3.2rem;
+    color: var(--color-primario);
+}
+
+/* ------...Segunda seccion...------ */
+
+.noticias__articulos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.carrusel {
+    flex: 1 0 auto;
+    margin: 0 50px;
+    background-color: var(--color-terceario);
+    width: 10em;
+    height: 20em;
+}
+
+/* ------...Contactanos...------ */
+
+    img {
+        width: 90vw;
+    }
+
+/* ------...Contactanos...------ */
+
+.formulario__contenedor {
+    background: var(--color-primario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__titulo {
+    font-size: 3rem;
+    font-family: var(--font-principal);
+    padding-left: 20px;
+    position: relative;
+    top: 20px;
+    color: var(--color-terceario);
+}
+
+form .contactanos {
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.entrada {
+    width: 80%;
+    height: 55px;
+    margin:  30px 0;
+    position: relative;
+}
+
+.input  {
+    font-family: var(--font-secundaria);
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    outline: none;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 20px;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: .5rem;
+}
+
+.entrada label {
+    position: absolute;
+    font-family: var(--font-secundaria);
+    top: 50%;
+    left: 10px;
+    padding-left: 10px;
+    margin: 20px;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #ffffff;
+    transition: .4s;
+}
+
+.entrada .input:focus ~ label,
+.entrada .input:valid ~ label {
+    top: -5px;
+    left: 10px;
+    backdrop-filter: blur(30px) ;
+    background: var(--color-primario);
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+textarea .input{
+    resize: none;
+}
+
+.btn {
+    position: relative;
+    background: var(--color-terceario);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    height: 2em;
+    width: 30%;
+    margin-bottom: 20px;
+    font-family: var(--font-secundaria);
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+/* ------...footer...------ */
+
+/* ------...Redes Sociales...------ */
+
+footer {
+    background: #25114e;
+}
+
+.footer__contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    padding: 5%;
+}
+
+.redes .s-n {
+    cursor: pointer;
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 25px;
+    transition: .3s ease-out;
+}
+
+.redes .s-n:hover {
+    scale: 1.20;
+}
+
+.redes .s-n .background {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transform: rotate(5deg);
+    transition: .3s ease-out;
+}
+
+.redes .s-n:hover .background {
+    transform: rotate(30deg);
+}
+
+.redes .s-n:nth-child(1) .background {
+    background: #ff0000;
+}
+
+.redes .s-n:nth-child(2) .background {
+    background: #1DA1F2;
+}
+
+.redes .s-n:nth-child(3) .background {
+    background: linear-gradient(to right, #FED372, #F86F2F, #D43089, #9E37B8, #5F4BC6 );
+}
+
+.redes .s-n:nth-child(4) .background {
+    background: #1877f2;
+}
+
+.redes .s-n:nth-child(5) .background {
+    background: linear-gradient(to right, #FE2C55, #25F4EE, #000000) ;
+}
+
+.redes .s-n:nth-child(6) .background {
+    background: #ff4500;
+}
+
+.redes .s-n:nth-child(7) .background {
+    background: #333333;
+}
+
+.redes .s-n:nth-child(8) .background {
+    background: #25d366;
+}
+
+.redes .s-n .glass {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    backdrop-filter: blur(20px) ;
+    background: rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+
+.redes .s-n i {
+    font-size: 2rem;
+    background: linear-gradient(
+        45deg, rgba(255, 255, 255, .1),
+        rgba(255, 255, 255, .3));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+/* ------...otros...------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ...........---Responsive---........... */
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* ------...Header...------ */
+
+    .header__logo {
+        font-size: 1.7rem;
+        transition: .8s;
+    }
+
+    /* ------...Banner...------ */
+
+    .banner {
+        height: 65vh;
+    }
+    
+    .banner::before {
+        height: 65vh;
+    }
+
+    .banner__contenido {
+        gap: 5px;
+        padding: 0 40px;
+
+    }
+
+    .banner__title {
+        font-size: 3.3rem;
+        transition: .8s;
+    }
+
+    .banner__paragraph {
+        font-size: 4rem;
+        transition: .8s;
+    }
+
+    /* ------...Primer seccion...------ */
+
+    .cryptos__titulo {
+        padding-top: 30px;
+        font-size: 2rem;
+    }
+
+    .cryptos__contenedor {
+        padding: 0 10px;
+        
+    }
+
+    .icono-crypto {
+        width: 11vw;
+    }
+
+    .crypto-texto {
+    font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* ------...Header...------ */
+
+    .header__logo {
+        font-size: 1.4rem;
+        transition: .8s;
+    }
+
+    .desplegar,
+    .cerrar {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-secundario);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0;
+        z-index: 100;
+        transition: 0.65s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 8px;
+    }
+
+    .cerrar {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+
+    /* ------...Banner...------ */
+
+    .banner {
+        height: 50vh;
+    }
+    
+    .banner::before {
+        height: 50vh;
+    }
+    
+    .banner__contenido {
+        gap: 20px;
+        padding: 0 30px;
+    }
+
+    .banner__title {
+        font-size: 2.4rem;
+        transition: .8s;
+    }
+
+    .banner__paragraph {
+        font-size: 2.5rem;
+        transition: .8s;
+    }
+
+    /* ------...Primer seccion...------ */
+
+    .cryptos__titulo {
+        padding-top: 30px;
+        font-size: 2rem;
+    }
+
+    #cryptos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cryptos__contenedor {
+        padding: 0 10px;
+        
+    }
+
+    .icono-crypto {
+        width: 22vw;
+        
+    }
+
+    .crypto-texto {
+    font-size: 2.6rem;
+    }
+}
