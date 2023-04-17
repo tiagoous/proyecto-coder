@@ -1,40 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">    
-    <title>Ser Crypto - Noticias</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../icons/css/all.css">
+    <title>Ser Crypto - Contactanos</title>
 </head>
 
 <body>
     <header class="header">
-        <a class="logo" href="../index.html"><strong>Ser Crypto</strong></a>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="./noticias.html">NOTICIAS</a></li>
-                <li><a href="./coins.html">TOKENS</a></li>
-                <li><a href="./nfts.html">NFTs</a></li>
-                <li><a href="./equipo.html">EQUIPO</a></li>
-                <li><a href="./contacto.html">CONTACTANOS</a></li>
-            </ul>
+        <a class="header__logo glitch" data-text="Ser Crypto" href="../index.html">
+            <h1>Ser Crypto</h1>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="desplegar">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="./noticias.html">NOTICIAS</a>
+            <a href="./coins.html">TOKENS</a>
+            <a href="./nfts.html">NFTs</a>
+            <a href="./equipo.html">EQUIPO</a>
+            <a href="./contacto.html">CONTACTANOS</a>
+            <label for="check" class="cerrar">
+                &#215
+            </label>
         </nav>
     </header>
 
     <main>
-
-        <section class="noticias-grilla">
-            <h2>Ultimas Noticias</h2>
-            <article class="noticia-destacada"></article>
-            <article class="noticia"></article>
-            <article class="noticia"></article>
-            <article class="noticia"></article>
+        <section class="noticias">
+            <h3 class="noticias__titulo">Últimas Noticias</h3>
+            <div class="noticias__articulos">
+                <div class="card card-1">
+                    <article class="primera-noticia">
+                        <div class="card__imagen">
+                            <img src="../multimedia/bitcoin.jpg" alt="">
+                        </div>
+                        <div class="arriba">
+                            <h4 class="autor">Tiago Etcheverry</h4>
+                            <a class="twiter-tag" href="#twiter">@tiagoousdev</a>
+                        </div>
+                        <p class="subtitulo">Bitcoin Halving 2024</p>
+                        <div class="abajo">
+                            <p>Bitcoin podría alcanzar un nuevo máximo histórico en las próximas semanas.</p>
+                            <h5 class="fecha">23:23 Hs / Dec 21, 2023</h5>
+                            <div class="btn">
+                                <a href="#">Seguir Leyendo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="card card-2">
+                    <article class="segunda-noticia">
+                        <div class="card__imagen">
+                            <img src="../multimedia/ethereum merge.png" alt="">
+                        </div>
+                        <div class="arriba">
+                            <h4 class="autor">Joel Garrison</h4>
+                            <a class="twiter-tag" href="#twiter">@joelsabedecryptos</a>
+                        </div>
+                        <p class="subtitulo">Ethereum 2.0</p>
+                        <div class="abajo">
+                            <p>A más de un año del Merge, Ethereum sigue perdiendo popularidad.</p>
+                            <h5 class="fecha">20:22 Hs / Dec 21, 2023</h5>
+                            <div class="btn">
+                                <a href="#">Seguir Leyendo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="card card-3">
+                    <article class="tercera-noticia">
+                        <div class="card__imagen">
+                            <img src="../multimedia/altcoins.jpg" alt="">
+                        </div>
+                        <div class="arriba">
+                            <h4 class="autor">Monica Rosales</h4>
+                            <a class="twiter-tag" href="#twiter">@monyrosales</a>
+                        </div>
+                        <p class="subtitulo">Altcoins en alza</p>
+                        <div class="abajo">
+                            <p>Las Altcoins reaccionan positivamente a las nuevas proyecciones de inflación en EEUU.</p>
+                            <h5 class="fecha">15:47 Hs / Dec 21, 2023</h5>
+                            <div class="btn">
+                                <a href="#">Seguir Leyendo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <div class="subscribe">
+            </div>
+        </div>
+        <hr>
+        <ul class="footer-list">
+            <li><a href="./noticias.html">NOTICIAS</a></li>
+            <li><a href="./coins.html">TOKENS</a></li>
+            <li><a href="./nfts.html">NFTs</a></li>
+            <li><a href="./equipo.html">EQUIPO</a></li>
+            <li><a href="./contacto.html">CONTACTANOS</a></li>
+        </ul>
+        <p>Carmen de Patagones CP 8504, Prov. de Bs As, Argentina.</p>
+        <p>&copy; 2023 Ser Crypto. Todos los derechos reservados.</p>
+        <h5>powered by tiagoousdev &reg;</h5>
     </footer>
 </body>
 

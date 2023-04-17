@@ -93,7 +93,7 @@ body {
 }
 /* ...........---Subtitulos Styles---........... */
 
-.cryptos__titulo, .noticias__titulo, .formulario__titulo, .grafico__titulo{
+.cryptos__titulo, .noticias__titulo, .formulario__titulo {
     font-family: var(--font-principal);
     color: #000000;
     text-align: center;
@@ -306,7 +306,7 @@ a:hover    {
     font-size: 2rem;
     color: #000000;
     -webkit-text-fill-color: var(--color-primario);
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
 }
 
 /* ------...Noticias...------ */
@@ -433,23 +433,9 @@ a:hover    {
 }
 /* ------...Grafico...------ */
 
-.grafico {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.grafico .grafico__background {
-    background-image: url(../multimedia/chart.png);
-    width: 95vw;
-    height: 65vh;
-    background-size: cover;
-    background-position: center;
-    margin: 10px 0 30px 0;
-    border: solid 2px #000000;
-    border-radius: 2px;
-    box-shadow: 5px 5px #000000;
-}
+/* img {
+    width: 100vw;
+} */
 
 /* ------...NFTs...------ */
 
@@ -473,9 +459,6 @@ a:hover    {
     justify-content: center;
 }
 
-.formulario__titulo {
-    padding: 20px 30px 0 30px;
-}
 
 form .contactanos {
     padding: 50px;
@@ -673,9 +656,9 @@ footer {
 
     /* reset */
     
-    .cryptos__titulo, .noticias__titulo, .formulario__titulo, .grafico__titulo {
+    .cryptos__titulo, .noticias__titulo, .formulario__titulo {
         padding-top:30px;
-        font-size: 2.6rem;
+        font-size: 2.8rem;
         text-shadow:  2px 2px #000000;
     }
 
@@ -712,14 +695,13 @@ footer {
 
     .menu a {
         display: block;
-        margin: 5px 60px;
-        padding: 5px;
+        padding: 8px;
     }
 
     .cerrar {
         position: absolute;
-        top: 15px;
-        right: 15px;
+        top: 40px;
+        right: 40px;
     }
 
     #check:checked~.menu {
@@ -778,6 +760,7 @@ footer {
     .noticias {
         padding: 0 0 20px 0;
         margin: 0;
+        border-radius: 0;
     }
 
     .noticias__articulos {
@@ -826,27 +809,13 @@ footer {
         margin: 20px;
     }
 
-    /* ------...Grafico...------ */
-
-.grafico .grafico__background {
-    background-image: url(../multimedia/chart\ mobile.png);
-    width: 85vw;
-    height: 85vh;
-}
 
     /* ------...Contactanos...------ */
 
     .formulario__contenedor{
-        width: 85vw;
-        margin: 24px;
-    }
-
-    .formulario__titulo {
-        padding: 30px 30px 0 30px;
-    }
-    
-    form .contactanos {
-        padding-top: 0;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
     }
 
     .entrada .input {
