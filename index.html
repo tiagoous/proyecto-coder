@@ -15,7 +15,7 @@
     <!-- HEADER -->
 
     <header class="header">
-        <a class="header__logo glitch" data-text="Ser Crypto" href="./index.html">
+        <a class="logo" data-text="Ser Crypto" href="./index.html">
             <h1>Ser Crypto</h1>
         </a>
         <input type="checkbox" id="check">
@@ -41,7 +41,8 @@
 
         <section class="banner">
             <div class="banner__contenido">
-                <h2 class="banner__title">TODO LO QUE NECESITAS SABER DE TUS <span class="italic">CRYPTOS FAVORITAS</span></h2>
+                <h2 class="banner__title">TODO LO QUE NECESITAS SABER DE TUS <span class="italic">CRYPTOS
+                        FAVORITAS</span></h2>
                 <p class="banner__paragraph">Noticias, Estadisticas, Opinion y <span class="bold ">MUCHO MAS</span></p>
             </div>
         </section>
@@ -164,17 +165,15 @@
             <h3 class="grafico__titulo">Cotizacion hoy</h3>
             <div class="grafico__background"></div>
         </section>
-        <!-- <section>
-            <h3 class="titulo-nft">TOP COLECCIONES</h3>
-            <div class="nft">
-                <img src="./multimedia/nfts.png" alt="">
-                <div>
-                    <img class="nft2" src="./multimedia/nfts 2.png" alt=""><span class="coleccion-titulo">Bored Ape
-                        Yacht Club</span>
-                    <img class="nft3" src="./multimedia/nfts 3.png" alt="">
-                </div>
+        <section>
+            <h3 class="nft__titulo">TOP COLECCIONES</h3>
+            <div class="nft__contenedor">
+                <img class="nft__menu" src="./multimedia/nfts.png" alt="menu colecciones">
+                <img class="nft__seleccionado" src="./multimedia/nfts 2.png" alt="coleccion seleccionada">
+                <h3 class="coleccion__titulo">Bored Ape Yacht Club</h3>
+                <img class="nft__contenido" src="./multimedia/nfts 3.png" alt="nfts de la coleccion">
             </div>
-        </section> -->
+        </section>
         <section class="formulario__contenedor">
             <h4 class="formulario__titulo">Dejanos tu mensaje!</h4>
             <form class="contactanos" action="">
@@ -198,21 +197,37 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__contenedor">
-            <div class="subscribe">
+        <div class="footer__contenedor-arriba">
+            <a class="footer__logo logo" data-text="Ser Crypto" href="./index.html">
+                <h2>Ser Crypto</h2>
+            </a>
+            <div class="footer__pages">
+                <ul class="pages">
+                    <li><a href="./pages/noticias.html">NOTICIAS</a></li>
+                    <li><a href="./pages/coins.html">TOKENS</a></li>
+                    <li><a href="./pages/nfts.html">NFTs</a></li>
+                    <li><a href="./pages/equipo.html">EQUIPO</a></li>
+                    <li><a href="./pages/contacto.html">CONTACTANOS</a></li>
+                </ul>
+            </div>
+            <div class="footer__subscribe">
+                <h2 class="seguinos">Seguinos!</h2>
+                <div class="rrss">
+                    <a href="#" class="rrss__icono btn btn__facebook"><img src="./icons/facebook-f.svg" alt="facebook"></a>
+                    <a href="#" class="rrss__icono btn btn__youtube"><img src="./icons/youtube.svg" alt="youtube"></a>
+                    <a href="#" class="rrss__icono btn btn__twitch"><img src="./icons/twitch.svg" alt="twitch"></a>
+                    <a href="#" class="rrss__icono btn btn__twitter"><img src="./icons/twitter.svg" alt="twitter"></a>
+                    <a href="#" class="rrss__icono btn btn__instagram"><img src="./icons/instagram.svg" alt="instagram"></a>
+                    <a href="#" class="rrss__icono btn btn__github"><img src="./icons/github.svg" alt="github"></a>
+                    <a href="#" class="rrss__icono btn btn__tiktok"><img src="./icons/tiktok.svg" alt="tiktok"></a>
+                    <a href="#" class="rrss__icono btn btn__whatsapp"><img src="./icons/whatsapp.svg" alt="whatsapp"></a>
+                </div>
             </div>
         </div>
-        <hr>
-        <ul class="footer-list">
-            <li><a href="./pages/noticias.html">NOTICIAS</a></li>
-            <li><a href="./pages/coins.html">TOKENS</a></li>
-            <li><a href="./pages/nfts.html">NFTs</a></li>
-            <li><a href="./pages/equipo.html">EQUIPO</a></li>
-            <li><a href="./pages/contacto.html">CONTACTANOS</a></li>
-        </ul>
-        <p>Carmen de Patagones CP 8504, Prov. de Bs As, Argentina.</p>
-        <p>&copy; 2023 Ser Crypto. Todos los derechos reservados.</p>
-        <h5>powered by tiagoousdev &reg;</h5>
+        <div class="footer__contenedor-abajo">
+            <small>&copy; 2023 <b>Ser Crypto</b> - Todos los derechos reservados.</small>
+            <small><b>Powered by tiagoousdev &reg;</b></small>
+        </div>
     </footer>
 
 </body>
