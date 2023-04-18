@@ -480,8 +480,7 @@ a:hover {
 /* ------...NFTs...------ */
 
 .nft__banner {
-    background-image: url(../multimedia/bitcoin.jpg);
-    /* cambiar por banner de  nft*/
+    background-image: url(../multimedia/nfts\ 4.png);
     height: 90vh;
     background-size: cover;
     background-position: center;
@@ -512,11 +511,13 @@ a:hover {
 }
 
 .nft__menu {
+    max-width: 30vw;
     grid-column: 1/2;
     grid-row: 1/3;
 }
 
 .nft__seleccionado {
+    max-width: 20vw;
     grid-column: 2/3;
 }
 
@@ -528,6 +529,7 @@ a:hover {
 }
 
 .nft__contenido {
+    max-width: 60vw;
     grid-column: 2/4;
 
 }
@@ -560,7 +562,7 @@ a:hover {
 .nft__informe   {
     grid-column: 1/3;
     grid-row: 1/3;
-    font-size: 8rem;
+    font-size: 6rem;
     padding: 120px 0;
     align-self: stretch;
     background: var(--color-primario);
@@ -570,6 +572,7 @@ a:hover {
 }
 
 .nft__contenedor-informe img {
+    max-width: 20vw;
     justify-self: center;
     align-self: center;
     padding: 15px;
@@ -577,7 +580,7 @@ a:hover {
 
 .nft__contenedor-informe p {
     font-family: var(--font-bold);
-    font-size: 1.9rem;
+    font-size: 1.8rem;
 }
 
 .informe__parrafo-top {
@@ -685,7 +688,7 @@ footer {
 
 .footer__contenedor-arriba {
     width: 100%;
-    max-width: 1200px;
+    max-width: 85vw;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -968,7 +971,9 @@ footer .footer__contenedor-arriba .footer__subscribe .rrss .rrss__icono img {
     .cryptos__titulo,
     .noticias__titulo,
     .formulario__titulo,
-    .grafico__titulo {
+    .grafico__titulo,
+    .nft__titulo,
+    h2.nft__informe {
         padding-top: 30px;
         font-size: 2.6rem;
         text-shadow: 2px 2px #000000;
@@ -1130,6 +1135,66 @@ footer .footer__contenedor-arriba .footer__subscribe .rrss .rrss__icono img {
         height: 85vh;
     }
 
+    /* ------...NFTs...------ */
+
+.nft__banner {
+    height: 50vh;
+    background-size: cover;
+    background-position: left;
+}
+
+.nft__banner::before {
+    height: 50vh;
+}
+
+.nft__contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+}
+
+.nft__menu {
+    max-width: 90vw;
+}
+
+.nft__seleccionado {
+    visibility: collapse;
+}
+
+.coleccion__titulo {
+    visibility: collapse;
+}
+
+.nft__contenido {
+    visibility: collapse;
+}
+
+.nft__menu,
+.informe__parrafo-top,
+.informe__parrafo-middle,
+.informe__parrafo-bottom {
+    padding: 5px;
+}
+
+.nft__contenedor-informe    {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.nft__informe   {
+    max-height: 30vh;
+}
+
+.nft__contenedor-informe img {
+    max-width: 60vw;
+}
+
+.nft__contenedor-informe p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
     /* ------...Contactanos...------ */
 
     .formulario__contenedor {
@@ -1166,6 +1231,8 @@ footer .footer__contenedor-arriba .footer__subscribe .rrss .rrss__icono img {
         font-size: 3rem;
     }
 
+        /* ------...Redes...------ */
+
     footer .footer__contenedor-arriba .footer__subscribe .seguinos {
         margin: 20px;
     }
@@ -1175,16 +1242,13 @@ footer .footer__contenedor-arriba .footer__subscribe .rrss .rrss__icono img {
     }
 
     footer .footer__contenedor-arriba .footer__subscribe .rrss .rrss__icono img {
-        width: .75em;
-        height: .75em;
+        width: 1.5em;
+        height: 1.5em;
     }
 
     .footer__contenedor-abajo {
         justify-content: space-around;
         text-align: center;
     }
-
-    /* ------...Redes...------ */
-
 
 }

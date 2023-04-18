@@ -49,52 +49,52 @@
 
         <!-- Cryptos -->
 
-        <h2 class="cryptos__titulo">Los Más Buscados</h2>
-        <section id="cryptos" class="cryptos">
-
-            <div class="cryptos__contenedor">
-                <div class="color__btc"></div>
-                <a href="#">
-                    <img class="icono-crypto" src="./multimedia/bitcoin-btc-logo.png" alt="btc">
-                    <h3 class="crypto-texto">BTC</h3>
-                </a>
+        <section>
+            <h2 class="cryptos__titulo">Los Más Buscados</h2>
+            <div class="cryptos" id="cryptos">
+                <div class="cryptos__contenedor">
+                    <div class="color__btc"></div>
+                    <a href="#">
+                        <img class="icono-crypto" src="./multimedia/bitcoin-btc-logo.png" alt="btc">
+                        <h3 class="crypto-texto">BTC</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="color__eth"></div>
+                    <a href="#">
+                        <img class="icono-crypto" src="./multimedia/ethereum-eth-logo.png" alt="eth">
+                        <h3 class="crypto-texto">ETH</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="color__usdt"></div>
+                    <a href="#">
+                        <img class="icono-crypto" src="./multimedia/tether-usdt-logo.png" alt="usdt">
+                        <h3 class="crypto-texto">USDT</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="color__rvn"></div>
+                    <a href="#">
+                        <img class="icono-crypto" src="./multimedia/ravencoin-rvn-logo.png" alt="rvn">
+                        <h3 class="crypto-texto">RVN</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="color__dot"></div>
+                    <a href="#">
+                        <img class="icono-crypto" src="./multimedia/polkadot-new-dot-logo.png" alt="dot">
+                        <h3 class="crypto-texto">DOT</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="color__bnb"></div>
+                    <a href="#">
+                        <img class="icono-crypto" src="./multimedia/bnb-bnb-logo.png" alt="bnb">
+                        <h3 class="crypto-texto">BNB</h3>
+                    </a>
+                </div>
             </div>
-            <div class="cryptos__contenedor">
-                <div class="color__eth"></div>
-                <a href="#">
-                    <img class="icono-crypto" src="./multimedia/ethereum-eth-logo.png" alt="eth">
-                    <h3 class="crypto-texto">ETH</h3>
-                </a>
-            </div>
-            <div class="cryptos__contenedor">
-                <div class="color__usdt"></div>
-                <a href="#">
-                    <img class="icono-crypto" src="./multimedia/tether-usdt-logo.png" alt="usdt">
-                    <h3 class="crypto-texto">USDT</h3>
-                </a>
-            </div>
-            <div class="cryptos__contenedor">
-                <div class="color__rvn"></div>
-                <a href="#">
-                    <img class="icono-crypto" src="./multimedia/ravencoin-rvn-logo.png" alt="rvn">
-                    <h3 class="crypto-texto">RVN</h3>
-                </a>
-            </div>
-            <div class="cryptos__contenedor">
-                <div class="color__dot"></div>
-                <a href="#">
-                    <img class="icono-crypto" src="./multimedia/polkadot-new-dot-logo.png" alt="dot">
-                    <h3 class="crypto-texto">DOT</h3>
-                </a>
-            </div>
-            <div class="cryptos__contenedor">
-                <div class="color__bnb"></div>
-                <a href="#">
-                    <img class="icono-crypto" src="./multimedia/bnb-bnb-logo.png" alt="bnb">
-                    <h3 class="crypto-texto">BNB</h3>
-                </a>
-            </div>
-
         </section>
 
         <!-- Noticias -->
@@ -161,10 +161,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Grafico estadistico // posteriormente traer el grafico con API de coingeko o coinmarketcap -->
+
         <section class="grafico">
             <h3 class="grafico__titulo">Cotizacion hoy</h3>
             <div class="grafico__background"></div>
         </section>
+
+        <!-- NFTs // posteriormente traer colecciones con API de opensea.io -->
+
         <section>
             <h3 class="nft__titulo">TOP COLECCIONES</h3>
             <div class="nft__contenedor">
@@ -174,6 +180,9 @@
                 <img class="nft__contenido" src="./multimedia/nfts 3.png" alt="nfts de la coleccion">
             </div>
         </section>
+
+        <!-- Contacto -->
+
         <section class="formulario__contenedor">
             <h4 class="formulario__titulo">Dejanos tu mensaje!</h4>
             <form class="contactanos" action="">
@@ -196,6 +205,8 @@
         </section>
     </main>
 
+    <!-- Footer -->
+
     <footer class="footer">
         <div class="footer__contenedor-arriba">
             <a class="footer__logo logo" data-text="Ser Crypto" href="./index.html">
@@ -213,14 +224,17 @@
             <div class="footer__subscribe">
                 <h2 class="seguinos">Seguinos!</h2>
                 <div class="rrss">
-                    <a href="#" class="rrss__icono btn btn__facebook"><img src="./icons/facebook-f.svg" alt="facebook"></a>
+                    <a href="#" class="rrss__icono btn btn__facebook"><img src="./icons/facebook-f.svg"
+                            alt="facebook"></a>
                     <a href="#" class="rrss__icono btn btn__youtube"><img src="./icons/youtube.svg" alt="youtube"></a>
                     <a href="#" class="rrss__icono btn btn__twitch"><img src="./icons/twitch.svg" alt="twitch"></a>
                     <a href="#" class="rrss__icono btn btn__twitter"><img src="./icons/twitter.svg" alt="twitter"></a>
-                    <a href="#" class="rrss__icono btn btn__instagram"><img src="./icons/instagram.svg" alt="instagram"></a>
+                    <a href="#" class="rrss__icono btn btn__instagram"><img src="./icons/instagram.svg"
+                            alt="instagram"></a>
                     <a href="#" class="rrss__icono btn btn__github"><img src="./icons/github.svg" alt="github"></a>
                     <a href="#" class="rrss__icono btn btn__tiktok"><img src="./icons/tiktok.svg" alt="tiktok"></a>
-                    <a href="#" class="rrss__icono btn btn__whatsapp"><img src="./icons/whatsapp.svg" alt="whatsapp"></a>
+                    <a href="#" class="rrss__icono btn btn__whatsapp"><img src="./icons/whatsapp.svg"
+                            alt="whatsapp"></a>
                 </div>
             </div>
         </div>
