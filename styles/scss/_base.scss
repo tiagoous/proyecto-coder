@@ -1,0 +1,114 @@
+/* .........---FONTS---......... */
+
+@font-face {
+    font-family: "Tusker Grotesk";
+    src: url("../../fonts/TuskerGrotesk-5500Medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Tusker Grotesk Light";
+    src: url("../../fonts/TuskerGrotesk-2600Semibold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Canter Light";
+    src: url("../../fonts/Canter-Light.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Canter Bold";
+    src: url("../../fonts/Canter-Bold.ttf") format("truetype");
+  }
+
+  
+  $font-primaria: "Tusker Grotesk";
+  $font-secundaria: "Tusker Grotesk Light";
+  $font-general: "Canter Light";
+  $font-bold: "Canter Bold";
+  
+  /* .........---ANIMATIONS---......... */
+  
+  @keyframes background-moving {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+  
+  /* ...........---PADDINGS Y MARGINS GENERALES---........... */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    /* .........---ANCLAS SUAVES Y SCROLLBAR---......... */
+  
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  
+    /* ...........---COLORES---........... */
+  
+    --color-primario: #8447ff;
+    --color-secundario: #8cffda;
+    --color-terceario: #ff36ab;
+    --color-cuaternario: #fcd72c;
+    --color-dark-mode-a: #ffffff;
+    --color-dark-mode-b: #888888;
+  
+  --gradient: linear-gradient(
+    60deg,
+    #a4f4f2,
+    #a0c4ff,
+    #ffd6e0,
+    #ffadad,
+    #ffef9f,
+    #fdffb6,
+    #c1fba4,
+    #7bf1a8
+  );
+  
+    /* ...........---MODO OSCURO---........... */
+  
+    @media (prefers-color-scheme: dark) {
+      & {
+        --color-primario: #8cffda;
+        --color-secundario: #8447ff;
+        --color-terceario: #fcd72c;
+        --color-cuaternario: #ff36ab;
+        --color-dark-mode-a: #888888;
+        --color-dark-mode-b: #ffffff;
+  
+        --gradient: linear-gradient(
+          60deg,
+          #664d00,
+          #6e2a0c,
+          #691312,
+          #5d0933,
+          #291938,
+          #042d3a,
+          #12403c,
+          #475200
+        );
+      }
+    }
+  }
+  
+  
+  /* .........---BACKGROUND---......... */
+  
+  body {
+    background: var(--gradient);
+    background-size: 400%;
+    animation: background-moving 25s infinite alternate;
+  }
+  
+  
+
+

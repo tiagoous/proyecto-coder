@@ -1,0 +1,62 @@
+  /* ------...Banner...------ */
+  
+  .banner {
+    background-image: url(../../multimedia/portada.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner::before {
+    content: "";
+    background: rgba(70, 70, 90, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    left: 0;
+  }
+  
+  .banner__contenido {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+  }
+  
+  .banner__title {
+    font-family: $font-primaria;
+    width: 50vw;
+    color: var(--color-cuaternario);
+    line-height: 1.4em;
+    font-size: 5.5rem;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  .banner__paragraph {
+    width: 29vw;
+    margin-left: 0.75em;
+    color: var(--color-terceario);
+    font-family: $font-secundaria;
+    font-size: 6rem;
+    line-height: 1.4em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .bold,
+  .italic {
+    text-shadow: 5px 5px #000000;
+  }
+  

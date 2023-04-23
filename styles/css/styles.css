@@ -1,0 +1,208 @@
+/* .........---FONTS---......... */
+@font-face {
+  font-family: "Tusker Grotesk";
+  src: url("../../fonts/TuskerGrotesk-5500Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tusker Grotesk Light";
+  src: url("../../fonts/TuskerGrotesk-2600Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Canter Light";
+  src: url("../../fonts/Canter-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Canter Bold";
+  src: url("../../fonts/Canter-Bold.ttf") format("truetype");
+}
+/* .........---ANIMATIONS---......... */
+@keyframes background-moving {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+/* ...........---PADDINGS Y MARGINS GENERALES---........... */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* .........---ANCLAS SUAVES Y SCROLLBAR---......... */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  /* ...........---COLORES---........... */
+  --color-primario: #8447ff;
+  --color-secundario: #8cffda;
+  --color-terceario: #ff36ab;
+  --color-cuaternario: #fcd72c;
+  --color-dark-mode-a: #ffffff;
+  --color-dark-mode-b: #888888;
+  --gradient: linear-gradient(
+    60deg,
+    #a4f4f2,
+    #a0c4ff,
+    #ffd6e0,
+    #ffadad,
+    #ffef9f,
+    #fdffb6,
+    #c1fba4,
+    #7bf1a8
+  );
+  /* ...........---MODO OSCURO---........... */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #8cffda;
+    --color-secundario: #8447ff;
+    --color-terceario: #fcd72c;
+    --color-cuaternario: #ff36ab;
+    --color-dark-mode-a: #888888;
+    --color-dark-mode-b: #ffffff;
+    --gradient: linear-gradient(
+      60deg,
+      #664d00,
+      #6e2a0c,
+      #691312,
+      #5d0933,
+      #291938,
+      #042d3a,
+      #12403c,
+      #475200
+    );
+  }
+}
+
+/* .........---BACKGROUND---......... */
+body {
+  background: var(--gradient);
+  background-size: 400%;
+  animation: background-moving 25s infinite alternate;
+}
+
+/* ------...Header...------ */
+.header {
+  height: 100px;
+  background: var(--gradient);
+  background-size: 400%;
+  animation: background-moving 15s infinite alternate;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000;
+}
+.header .logo {
+  font-family: "Tusker Grotesk";
+  font-size: 4rem;
+  text-shadow: 5px 5px #000000;
+  transition: 0.3s;
+  -webkit-text-fill-color: var(--color-terceario);
+  -webkit-text-stroke-width: 3px;
+}
+.header .logo a {
+  color: #000000;
+  text-decoration: none;
+}
+.header .menu a {
+  font-family: "Tusker Grotesk Light";
+  color: #000000;
+  font-size: 3.5rem;
+  padding: 0 10px;
+  transition: 0.3s;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-shadow: 3px 3px #000000;
+  -webkit-text-fill-color: var(--color-primario);
+  -webkit-text-stroke-width: 1px;
+}
+.header .desplegar,
+.header .cerrar {
+  font-size: 2.8rem;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+}
+.header .desplegar {
+  order: 1;
+}
+.header .menu a:hover {
+  -webkit-text-fill-color: var(--color-dark-mode-b);
+}
+.header #check {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* ------...Header...------ */
+  .header {
+    padding: 15px;
+  }
+  .logo {
+    font-size: 2.5rem;
+    transition: 0.8s;
+    text-shadow: 3px 3px #000000;
+  }
+  .desplegar,
+  .cerrar {
+    display: block;
+    text-shadow: 2px 2px #000000;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-secundario);
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 50px 0;
+    z-index: 100;
+    transition: 0.65s;
+  }
+  .menu a {
+    display: block;
+    margin: 5px 60px;
+    padding: 5px;
+  }
+  .cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+/* ...........---Botones Styles---........... */
+.btn {
+  background: var(--color-terceario);
+  padding: 12px 18px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  box-shadow: 5px 5px #000000;
+  font-family: "Tusker Grotesk Light";
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #000000;
+  letter-spacing: 3px;
+  transition: 0.2s;
+}
+.btn:hover {
+  transform: translate(3px);
+  box-shadow: 3px 3px #000000;
+  cursor: pointer;
+}
+.btn a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
