@@ -1,0 +1,212 @@
+/* ...........---Footer Styles---........... */
+
+.footer {
+  width: 100%;
+  background: rgb(102, 102, 102);
+
+  &__arriba {
+    width: 100%;
+    max-width: 85vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 45px 0;
+
+    @include mobile {
+      width: 90%;
+      grid-template-columns: 1fr;
+      padding: 25px 0;
+    }
+
+    &--logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      font-family: $font-primaria;
+      text-shadow: 5px 5px rgb(0, 0, 0);
+      transition: 0.3s;
+      -webkit-text-fill-color: var(--color-terceario);
+      -webkit-text-stroke-width: 3px;
+
+      @include mobile {
+        margin: 20px;
+        font-size: 3rem;
+      }
+      a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+      }
+    }
+
+    &--pages {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          font-family: $font-general;
+          font-size: 2rem;
+          color: var(--color-primario);
+          text-decoration: none;
+          font-weight: 1000;
+          text-shadow: 2px 2px rgb(0, 0, 0);
+          transition: 0.3s;
+        }
+      }
+    }
+
+    &--subscribe {
+      .follow {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        color: rgb(0, 0, 0);
+        font-family: $font-bold;
+        font-size: 2.5rem;
+
+        @include mobile {
+          margin: 20px;
+        }
+      }
+
+      .rrss {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+          flex-wrap: wrap;
+        }
+
+        &__btn {
+          @extend .btn;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 5px;
+          padding: 2px;
+
+          &:hover {
+            background: rgb(255, 255, 255);
+          }
+
+          &--facebook {
+            background: rgb(24, 119, 242);
+
+            &:hover img {
+              filter: invert(48%) sepia(76%) saturate(5611%) hue-rotate(202deg)
+                brightness(98%) contrast(94%);
+            }
+          }
+
+          &--youtube {
+            background: rgb(255, 0, 0);
+
+            &:hover img {
+              filter: invert(21%) sepia(98%) saturate(3683%) hue-rotate(351deg)
+                brightness(95%) contrast(137%);
+            }
+          }
+
+          &--twitch {
+            background: rgb(144, 70, 255);
+
+            &:hover img {
+              filter: invert(36%) sepia(61%) saturate(4777%) hue-rotate(248deg)
+                brightness(99%) contrast(105%);
+            }
+          }
+
+          &--twitter {
+            background: rgb(29, 155, 240);
+
+            &:hover img {
+              filter: invert(43%) sepia(98%) saturate(1410%) hue-rotate(179deg)
+                brightness(100%) contrast(89%);
+            }
+          }
+
+          &--instagram {
+            background: linear-gradient(
+              45deg,
+              rgb(239, 196, 0),
+              rgb(240, 8, 26),
+              rgb(106, 52, 233)
+            );
+
+            &:hover img {
+              filter: invert(30%) sepia(94%) saturate(7065%) hue-rotate(257deg)
+                brightness(96%) contrast(90%);
+            }
+          }
+
+          &--github {
+            background: rgb(22, 27, 34);
+
+            &:hover img {
+              filter: invert(8%) sepia(17%) saturate(854%) hue-rotate(175deg)
+                brightness(97%) contrast(95%);
+            }
+          }
+
+          &--tiktok {
+            background: linear-gradient(
+              to right,
+              rgb(0, 0, 0),
+              rgb(101, 195, 202),
+              rgb(247, 247, 247),
+              rgb(231, 29, 79),
+              rgb(0, 0, 0)
+            );
+
+            &:hover img {
+              filter: invert(20%) sepia(53%) saturate(4337%) hue-rotate(328deg)
+                brightness(98%) contrast(105%);
+            }
+          }
+
+          &--whatsapp {
+            background: rgb(27, 215, 65);
+
+            &:hover img {
+              filter: invert(73%) sepia(50%) saturate(3565%) hue-rotate(80deg)
+                brightness(97%) contrast(91%);
+            }
+          }
+        }
+
+        &__icono img {
+          height: 1em;
+          width: 1em;
+          margin: 5px;
+
+          @include mobile {
+            width: 1.5em;
+            height: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  &__abajo {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2px;
+    font-size: 1.5rem;
+    font-family: $font-bold;
+    letter-spacing: 1px;
+
+    @include mobile {
+      justify-content: space-around;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+/* ------...Cryptos...------ */
+
+.cryptos {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 60px;
+
+  @include mobile {
+    display: flex;
+  flex-wrap: wrap;
+  }
+
+  &__contenedor {
+    background: var(--color-dark-mode-a);
+    border-radius: 2px;
+    transition: 0.2s;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px rgb(0, 0, 0);
+
+    &:hover {
+      transform: translate(3px);
+      box-shadow: 3px 3px rgb(0, 0, 0);
+      cursor: pointer;
+    }
+
+    @include tablet {
+        padding: 0 10px;
+    }
+
+    &--color {
+      height: 30px;
+      border-bottom: solid 2px rgb(0, 0, 0);
+
+      &--btc {
+        background: rgb(255, 157, 0);
+      }
+
+      &--eth {
+        background: rgb(160, 212, 223);
+      }
+
+      &--usdt {
+        background: rgb(44, 252, 141);
+      }
+
+      &--rvn {
+        background: rgb(71, 73, 183);
+      }
+
+      &--dot {
+        background: rgb(201, 26, 108);
+      }
+
+      &--bnb {
+        background: rgb(252, 215, 44);
+      }
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px;
+
+      .icono-crypto {
+        width: 7vw;
+
+        @include tablet {
+            width: 11vw;
+        }
+
+        @include mobile {
+            width: 22vw;
+        }
+      }
+
+      .texto-crypto {
+        font-family: $font-bold;
+        font-size: 3rem;
+        color: var(--color-primario);
+        text-shadow: 2px 2px rgb(0, 0, 0);
+
+        @include tablet {
+            font-size: 2.8rem;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+        }
+      }
+    }
+  }
+}

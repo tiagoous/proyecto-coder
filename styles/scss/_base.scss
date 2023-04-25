@@ -26,6 +26,20 @@
   $font-general: "Canter Light";
   $font-bold: "Canter Bold";
   
+  /* .........---MIXINS---......... */
+
+  @mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+  }
+
+  @mixin tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+  }
+  
   /* .........---ANIMATIONS---......... */
   
   @keyframes background-moving {
@@ -55,46 +69,46 @@
   
     /* ...........---COLORES---........... */
   
-    --color-primario: #8447ff;
-    --color-secundario: #8cffda;
-    --color-terceario: #ff36ab;
-    --color-cuaternario: #fcd72c;
-    --color-dark-mode-a: #ffffff;
-    --color-dark-mode-b: #888888;
+    --color-primario: rgb(132, 71, 255);
+    --color-secundario: rgb(140, 255, 218);
+    --color-terceario: rgb(255, 54, 171);
+    --color-cuaternario: rgb(252, 215, 44);
+    --color-dark-mode-a: rgb(255, 255, 255);
+    --color-dark-mode-b: rgb(136, 136, 136);
   
   --gradient: linear-gradient(
     60deg,
-    #a4f4f2,
-    #a0c4ff,
-    #ffd6e0,
-    #ffadad,
-    #ffef9f,
-    #fdffb6,
-    #c1fba4,
-    #7bf1a8
+    rgb(164, 244, 242),
+    rgb(160, 196, 255),
+    rgb(255, 214, 224),
+    rgb(255, 173, 173),
+    rgb(255, 239, 159),
+    rgb(253, 255, 182),
+    rgb(193, 251, 164),
+    rgb(123, 241, 168)
   );
   
     /* ...........---MODO OSCURO---........... */
   
     @media (prefers-color-scheme: dark) {
       & {
-        --color-primario: #8cffda;
-        --color-secundario: #8447ff;
-        --color-terceario: #fcd72c;
-        --color-cuaternario: #ff36ab;
-        --color-dark-mode-a: #888888;
-        --color-dark-mode-b: #ffffff;
+        --color-primario: rgb(140, 255, 218);
+        --color-secundario: rgb(132, 71, 255);
+        --color-terceario: rgb(252, 215, 44);
+        --color-cuaternario: rgb(255, 54, 171);
+        --color-dark-mode-a: rgb(136, 136, 136);
+        --color-dark-mode-b: rgb(255, 255, 255);
   
         --gradient: linear-gradient(
           60deg,
-          #664d00,
-          #6e2a0c,
-          #691312,
-          #5d0933,
-          #291938,
-          #042d3a,
-          #12403c,
-          #475200
+          rgb(102, 77, 0),
+          rgb(110, 42, 12),
+          rgb(105, 19, 18),
+          rgb(93, 9, 51),
+          rgb(41, 25, 56),
+          rgb(4, 45, 58),
+          rgb(18, 64, 60),
+          rgb(71, 82, 0)
         );
       }
     }

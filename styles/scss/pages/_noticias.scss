@@ -1,0 +1,145 @@
+.noticias {
+    height: 100%;
+    display: grid;
+    text-align: center;
+    padding: 20px 20px 20px;
+    margin: 20px 80px;
+  }
+  
+  .noticias__articulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 350px;
+    min-height: 550px;
+    margin: 0 20px;
+    background: var(--color-dark-mode-a);
+    transition: 0.2s;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    box-shadow: 5px 5px #000000;
+  }
+  
+  .card-1 {
+    order: 2;
+  }
+  
+  .card-2 {
+    order: 1;
+  }
+  
+  .card-3 {
+    order: 3;
+  }
+  
+  .card article .card__imagen {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .card article .card__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: solid 2px #000000;
+  }
+  
+  .card-1 .primera-noticia .arriba {
+    padding: 20px;
+  }
+  
+  .card .arriba {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card .arriba a {
+    padding-left: 5px;
+    text-decoration: none;
+  }
+  
+  .card .arriba .autor {
+    font-family: $font-bold;
+    font-size: 2rem;
+    color: var(--color-dark-mode-b);
+  }
+  
+  .card-1 .primera-noticia .arriba .autor {
+    font-size: 2.5rem;
+  }
+  
+  .card .arriba .twiter-tag {
+    font-family: $font-bold;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: var(--color-terceario);
+  }
+  
+  .card-1 .primera-noticia .arriba .twiter-tag {
+    font-size: 1.5rem;
+  }
+  
+  .card .subtitulo {
+    font-family: $font-primaria;
+    font-size: 1.6rem;
+    color: var(--color-primario);
+  }
+  
+  .card-1 .primera-noticia .subtitulo {
+    font-size: 2rem;
+  }
+  
+  .card .abajo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--color-dark-mode-a);
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .card .abajo p {
+    text-align: center;
+    font-family: $font-bold;
+    font-size: 2rem;
+    color: var(--color-terceario);
+  }
+  
+  .card .abajo .fecha {
+    text-align: center;
+    font-family: $font-general;
+    padding: 5px;
+    font-size: 1.5rem;
+    color: var(--color-dark-mode-b);
+  }
+  
+  .card .abajo .btn {
+    margin: 20px 50px;
+  }
+  
+  /* ------...Grafico...------ */
+  
+  .grafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grafico .grafico__background {
+    background-image: url(../../multimedia/chart.png);
+    width: 95vw;
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    margin: 10px 0 30px 0;
+    border: solid 2px #000000;
+    border-radius: 2px;
+    box-shadow: 5px 5px #000000;
+  }

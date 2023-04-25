@@ -1,42 +1,91 @@
-  /* ------...Banner...------ */
-  
-  .banner {
-    background-image: url(../../multimedia/portada.jpg);
-    height: 90vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
+/* ------...Banner...------ */
+
+.banner {
+  background-image: url(../../../multimedia/portada.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    height: 85vh;
   }
-  
-  .banner::before {
+
+  @include tablet {
+    height: 65vh;
+  }
+
+  &::before {
     content: "";
     background: rgba(70, 70, 90, 0.4);
     position: absolute;
     width: 100%;
     height: 90vh;
     left: 0;
+
+    @include mobile {
+      height: 85vh;
+    }
+
+    @include tablet {
+      height: 65vh;
+    }
   }
-  
-  .banner__contenido {
+
+  &__contenido {
     position: relative;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 80px;
+
+    span {
+      text-shadow: 5px 5px rgb(0, 0, 0);
+
+      @include mobile {
+        text-shadow: 3px 3px rgb(0, 0, 0);
+      }
+    }
+
+    @include mobile {
+        padding: 1px;
+    margin: 5px;
+    padding: 1px;
+    margin: 5px;
+    }
+
+    @include tablet {
+        gap: 5px;
+    padding: 0 40px;
+    }
   }
-  
-  .banner__title {
+
+  &__title {
     font-family: $font-primaria;
     width: 50vw;
     color: var(--color-cuaternario);
     line-height: 1.4em;
     font-size: 5.5rem;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+
+    span {
+      font-style: italic;
+    }
+
+    @include mobile {
+        font-size: 2.5rem;
+    transition: 0.8s;
+    }
+
+    @include tablet {
+        font-size: 3.3rem;
+    transition: 0.8s;
+    }
   }
-  
-  .banner__paragraph {
+
+  &__paragraph {
     width: 29vw;
     margin-left: 0.75em;
     color: var(--color-terceario);
@@ -44,19 +93,21 @@
     font-size: 6rem;
     line-height: 1.4em;
     letter-spacing: 2px;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+
+    span {
+      font-weight: 600;
+    }
+
+    @include mobile {
+        font-size: 2.45rem;
+    font-size: 2.45rem;
+    transition: 0.8s;
+    }
+
+    @include tablet {
+        font-size: 3.8rem;
+    transition: 0.8s;
+    }
   }
-  
-  .bold {
-    font-weight: 600;
-  }
-  
-  .italic {
-    font-style: italic;
-  }
-  
-  .bold,
-  .italic {
-    text-shadow: 5px 5px #000000;
-  }
-  
+}
