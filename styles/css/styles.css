@@ -518,97 +518,66 @@ body {
   padding: 20px 20px 20px;
   margin: 20px 80px;
 }
-
-.noticias__articulos {
+.noticias__contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.card {
+.noticias__contenedor--card {
   width: 350px;
   min-height: 550px;
   margin: 0 20px;
   background: var(--color-dark-mode-a);
   transition: 0.2s;
-  border: 2px solid #000000;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px #000000;
+  box-shadow: 5px 5px rgb(0, 0, 0);
 }
-
-.card-1 {
+.noticias__contenedor--card--principal {
   order: 2;
 }
-
-.card-2 {
+.noticias__contenedor--card--secundaria {
   order: 1;
 }
-
-.card-3 {
+.noticias__contenedor--card--tercearia {
   order: 3;
 }
-
-.card article .card__imagen {
+.noticias__articulos--imagen {
   width: 100%;
   height: 150px;
 }
-
-.card article .card__imagen img {
+.noticias__articulos--imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-bottom: solid 2px #000000;
+  border-bottom: solid 2px rgb(0, 0, 0);
 }
-
-.card-1 .primera-noticia .arriba {
-  padding: 20px;
-}
-
-.card .arriba {
+.noticias__articulos--autor {
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-.card .arriba a {
-  padding-left: 5px;
-  text-decoration: none;
-}
-
-.card .arriba .autor {
+.noticias__articulos--autor--name {
   font-family: "Canter Bold";
   font-size: 2rem;
   color: var(--color-dark-mode-b);
 }
-
-.card-1 .primera-noticia .arriba .autor {
-  font-size: 2.5rem;
-}
-
-.card .arriba .twiter-tag {
+.noticias__articulos--autor--twitter {
+  padding-left: 5px;
+  text-decoration: none;
   font-family: "Canter Bold";
   font-size: 1.2rem;
   font-weight: 550;
   color: var(--color-terceario);
 }
-
-.card-1 .primera-noticia .arriba .twiter-tag {
-  font-size: 1.5rem;
-}
-
-.card .subtitulo {
+.noticias__articulos--headline {
   font-family: "Tusker Grotesk";
   font-size: 1.6rem;
   color: var(--color-primario);
 }
-
-.card-1 .primera-noticia .subtitulo {
-  font-size: 2rem;
-}
-
-.card .abajo {
+.noticias__articulos--body {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -616,44 +585,115 @@ body {
   justify-content: center;
   justify-items: center;
 }
-
-.card .abajo p {
+.noticias__articulos--body--lead {
   text-align: center;
   font-family: "Canter Bold";
   font-size: 2rem;
   color: var(--color-terceario);
 }
-
-.card .abajo .fecha {
+.noticias__articulos--body--date {
   text-align: center;
   font-family: "Canter Light";
   padding: 5px;
   font-size: 1.5rem;
   color: var(--color-dark-mode-b);
 }
-
-.card .abajo .btn, .card .abajo .footer__arriba--subscribe .rrss__btn, .footer__arriba--subscribe .card .abajo .rrss__btn {
+.noticias__articulos--body--btn {
   margin: 20px 50px;
 }
-
-/* ------...Grafico...------ */
-.grafico {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.noticias__articulos__principal--autor {
+  padding: 20px;
+}
+.noticias__articulos__principal--autor--name {
+  font-size: 2.5rem;
+}
+.noticias__articulos__principal--autor--twitter {
+  font-size: 1.5rem;
+}
+.noticias__articulos__principal--headline {
+  font-size: 2rem;
 }
 
-.grafico .grafico__background {
-  background-image: url(../../multimedia/chart.png);
-  width: 95vw;
-  height: 65vh;
-  background-size: cover;
-  background-position: center;
-  margin: 10px 0 30px 0;
-  border: solid 2px #000000;
-  border-radius: 2px;
-  box-shadow: 5px 5px #000000;
+.noticias {
+  margin: 20px;
+}
+
+.noticias__articulos {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 20px;
+}
+
+.card .arriba {
+  flex-direction: column;
+  padding: 0;
+}
+
+.card-1 .primera-noticia .arriba {
+  padding: 5px;
+}
+
+.card-1 {
+  order: 3;
+}
+
+.card-2 {
+  order: 2;
+}
+
+.card-3 {
+  order: 1;
+}
+
+.noticias {
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+.noticias__articulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 80vw;
+}
+
+.card .arriba {
+  flex-direction: column;
+}
+
+.card-1 .primera-noticia .arriba {
+  padding: 10px;
+}
+
+.card-1 .primera-noticia .arriba .autor {
+  font-size: 1.2rem;
+}
+
+.card-1 .primera-noticia .arriba .twiter-tag {
+  font-size: 1rem;
+}
+
+.card-1 .primera-noticia .subtitulo {
+  font-size: 1.6rem;
+}
+
+.card-1 {
+  order: 1;
+}
+
+.card-2 {
+  order: 2;
+}
+
+.card-3 {
+  order: 3;
+}
+
+.card .abajo .btn, .card .abajo .footer__arriba--subscribe .rrss__btn, .footer__arriba--subscribe .card .abajo .rrss__btn {
+  margin: 20px;
 }
 
 /* ------...Cryptos...------ */
