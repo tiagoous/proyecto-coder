@@ -2,34 +2,89 @@
   height: 100%;
   display: grid;
   text-align: center;
-  padding: 20px 20px 20px;
-  margin: 20px 80px;
+  padding: 0.32em;
+
+  @include tablet {
+    margin: 1.25em 0;
+    padding:1.25em 0;
+  }
+
+  @include mobile {
+    padding: 1.25em 0;
+    margin: 0;
+  }
 
   &__contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      gap: 1.25em;
+      padding: 0;
+      margin: 0;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25em;
+    }
+
     &--card {
-      width: 350px;
-      min-height: 550px;
-      margin: 0 20px;
+      width: 22em;
+      min-height: 35em;
+      margin: 0 1.25em;
       background: var(--color-dark-mode-a);
       transition: 0.2s;
       border: 2px solid rgb(0, 0, 0);
       border-radius: 2px;
       box-shadow: 5px 5px rgb(0, 0, 0);
 
+      @include tablet {
+        margin: 0.32em;
+      }
+
+      @include mobile {
+        width: 80vw;
+      }
+
       &--principal {
         order: 2;
+
+        @include tablet {
+          order: 3;
+        }
+
+        @include mobile {
+          order: 1;
+        }
       }
 
       &--secundaria {
         order: 1;
+
+        @include tablet {
+          order: 2;
+        }
+
+        @include mobile {
+          order: 2;
+        }
       }
 
       &--tercearia {
         order: 3;
+
+        @include tablet {
+          order: 1;
+        }
+
+        @include mobile {
+          order: 3;
+        }
       }
     }
   }
@@ -37,7 +92,7 @@
   &__articulos {
     &--imagen {
       width: 100%;
-      height: 150px;
+      height: 9.5em;
 
       img {
         width: 100%;
@@ -48,11 +103,20 @@
     }
 
     &--autor {
-      padding: 10px;
+      padding: 0.65em;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+
+      @include tablet {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
 
       &--name {
         font-family: $font-bold;
@@ -61,7 +125,7 @@
       }
 
       &--twitter {
-        padding-left: 5px;
+        padding-left: 0.32em;
         text-decoration: none;
         font-family: $font-bold;
         font-size: 1.2rem;
@@ -79,7 +143,7 @@
     &--body {
       display: flex;
       flex-direction: column;
-      padding: 20px;
+      padding: 1.25em;
       background: var(--color-dark-mode-a);
       justify-content: center;
       justify-items: center;
@@ -94,119 +158,56 @@
       &--date {
         text-align: center;
         font-family: $font-general;
-        padding: 5px;
+        padding: 0.32em;
         font-size: 1.5rem;
         color: var(--color-dark-mode-b);
       }
 
       &--btn {
-        margin: 20px 50px;
+        margin: 1.25em 3.2em;
+
+        @include mobile {
+          margin: 1.25em;
+        }
       }
     }
 
     &__principal {
-        &--autor {
-            padding: 20px;
+      &--autor {
+        padding: 1.25em;
 
-            &--name {
-                font-size: 2.5rem;
-            }
-
-            &--twitter {
-                font-size: 1.5rem;
-            }
+        @include tablet {
+          padding: 0.32em;
         }
 
-        &--headline {
-            font-size: 2rem;
+        @include mobile {
+          padding: 0.65em;
         }
+
+        &--name {
+          font-size: 2.5rem;
+
+          @include mobile {
+            font-size: 1.2rem;
+          }
+        }
+
+        &--twitter {
+          font-size: 1.5rem;
+
+          @include mobile {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &--headline {
+        font-size: 2rem;
+
+        @include mobile {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
-}
-
-
-// RESPONSIVE TABLET
-
-.noticias {
-  margin: 20px;
-}
-
-.noticias__articulos {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  gap: 20px;
-}
-
-.card .arriba {
-  flex-direction: column;
-  padding: 0;
-}
-
-.card-1 .primera-noticia .arriba {
-  padding: 5px;
-}
-
-.card-1 {
-  order: 3;
-}
-
-.card-2 {
-  order: 2;
-}
-
-.card-3 {
-  order: 1;
-}
-
-// RESPONSIVE MOBILE
-
-.noticias {
-  padding: 0 0 20px 0;
-  margin: 0;
-}
-
-.noticias__articulos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  width: 80vw;
-}
-
-.card .arriba {
-  flex-direction: column;
-}
-
-.card-1 .primera-noticia .arriba {
-  padding: 10px;
-}
-
-.card-1 .primera-noticia .arriba .autor {
-  font-size: 1.2rem;
-}
-
-.card-1 .primera-noticia .arriba .twiter-tag {
-  font-size: 1rem;
-}
-
-.card-1 .primera-noticia .subtitulo {
-  font-size: 1.6rem;
-}
-
-.card-1 {
-  order: 1;
-}
-
-.card-2 {
-  order: 2;
-}
-
-.card-3 {
-  order: 3;
-}
-
-.card .abajo .btn {
-  margin: 20px;
 }

@@ -29,13 +29,13 @@
   /* .........---MIXINS---......... */
 
   @mixin mobile {
-    @media (max-width: 767px) {
+    @media (width < 768px) {
         @content;
     }
   }
 
   @mixin tablet {
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (width >= 768px) and (width <= 1024px) {
         @content;
     }
   }
@@ -101,14 +101,13 @@
   
         --gradient: linear-gradient(
           60deg,
-          rgb(102, 77, 0),
-          rgb(110, 42, 12),
           rgb(105, 19, 18),
           rgb(93, 9, 51),
           rgb(41, 25, 56),
           rgb(4, 45, 58),
           rgb(18, 64, 60),
-          rgb(71, 82, 0)
+          rgb(71, 82, 0),
+          rgb(102, 77, 0)
         );
       }
     }

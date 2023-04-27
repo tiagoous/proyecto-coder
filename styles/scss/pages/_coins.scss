@@ -1,11 +1,17 @@
 /* ------...Cryptos...------ */
 
 .cryptos {
-  padding: 20px;
+  padding: 1.25em;
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 60px;
+  gap: 3.75em;
+
+  @include tablet {
+    display: flex;
+  flex-wrap: wrap;
+  padding: 1.25em 9em;
+  }
 
   @include mobile {
     display: flex;
@@ -25,12 +31,8 @@
       cursor: pointer;
     }
 
-    @include tablet {
-        padding: 0 10px;
-    }
-
     &--color {
-      height: 30px;
+      height: 1.9em;
       border-bottom: solid 2px rgb(0, 0, 0);
 
       &--btc {
@@ -64,7 +66,7 @@
       justify-content: center;
       text-align: center;
       text-decoration: none;
-      padding: 10px;
+      padding: 0.65em;
 
       .icono-crypto {
         width: 7vw;
