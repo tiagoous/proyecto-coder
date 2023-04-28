@@ -78,14 +78,14 @@
   
   --gradient: linear-gradient(
     60deg,
-    rgb(164, 244, 242),
-    rgb(160, 196, 255),
-    rgb(255, 214, 224),
-    rgb(255, 173, 173),
-    rgb(255, 239, 159),
-    rgb(253, 255, 182),
-    rgb(193, 251, 164),
-    rgb(123, 241, 168)
+    rgb(107, 243, 239),
+    rgb(102, 160, 254),
+    rgb(254, 99, 138),
+    rgb(251, 82, 82),
+    rgb(252, 223, 76),
+    rgb(247, 253, 68),
+    rgb(134, 253, 75),
+    rgb(70, 246, 137)
   );
   
     /* ...........---MODO OSCURO---........... */
@@ -123,5 +123,42 @@
   }
   
   
+  /* .........---TEXTOS---......... */
 
+  .cryptos__titulo,
+.noticias__titulo,
+.formulario__titulo,
+.grafico__titulo,
+.nft__titulo,
+.nft__informe,
+.equipo__titulo {
+  font-family: $font-primaria;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 1.25em 1.9em;
+  font-size: 4rem;
+  text-shadow: 4px 4px rgb(0, 0, 0);
+  letter-spacing: 0.15rem;
+  -webkit-text-fill-color: var(--color-terceario);
+  -webkit-text-stroke-width: 2px;
+}
 
+@include tablet(){
+    .titulo__cryptos {
+        padding-top: 1.9em;
+        font-size: 2rem;
+      }
+}
+
+@include mobile() {
+    .cryptos__titulo,
+    .noticias__titulo,
+    .formulario__titulo,
+    .grafico__titulo,
+    .nft__titulo,
+    h2.nft__informe {
+      padding-top: 1.9em;
+      font-size: 2.6rem;
+      text-shadow: 2px 2px rgb(0, 0, 0);
+}
+}
