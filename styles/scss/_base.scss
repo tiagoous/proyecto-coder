@@ -1,81 +1,119 @@
 /* .........---FONTS---......... */
 
 @font-face {
-    font-family: "Tusker Grotesk";
-    src: url("../../fonts/TuskerGrotesk-5500Medium.ttf") format("truetype");
+  font-family: "Tusker Grotesk";
+  src: url("../../fonts/TuskerGrotesk-5500Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tusker Grotesk Light";
+  src: url("../../fonts/TuskerGrotesk-2600Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Canter Light";
+  src: url("../../fonts/Canter-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Canter Bold";
+  src: url("../../fonts/Canter-Bold.ttf") format("truetype");
+}
+
+$font-primaria: "Tusker Grotesk";
+$font-secundaria: "Tusker Grotesk Light";
+$font-general: "Canter Light";
+$font-bold: "Canter Bold";
+
+/* .........---MIXINS---......... */
+
+@mixin mobile {
+  @media (width < 480px) {
+    @content;
   }
-  
-  @font-face {
-    font-family: "Tusker Grotesk Light";
-    src: url("../../fonts/TuskerGrotesk-2600Semibold.ttf") format("truetype");
+}
+
+@mixin tablet {
+  @media (width >= 480px) and (width < 768px) {
+    @content;
   }
-  
-  @font-face {
-    font-family: "Canter Light";
-    src: url("../../fonts/Canter-Light.ttf") format("truetype");
+}
+
+@mixin notebook {
+  @media (width >= 768px) and (width < 1024px) {
+    @content;
   }
-  
-  @font-face {
-    font-family: "Canter Bold";
-    src: url("../../fonts/Canter-Bold.ttf") format("truetype");
+}
+
+@mixin desktop {
+  @media (width >= 1024px) and (width < 1200px) {
+    @content;
+  }
+}
+
+@mixin tv {
+    @media (width > 1200px) {
+      @content;
+    }
   }
 
-  
-  $font-primaria: "Tusker Grotesk";
-  $font-secundaria: "Tusker Grotesk Light";
-  $font-general: "Canter Light";
-  $font-bold: "Canter Bold";
-  
-  /* .........---MIXINS---......... */
+/* .........---ANIMATIONS---......... */
 
-  @mixin mobile {
-    @media (width < 768px) {
-        @content;
-    }
+@keyframes background-moving {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes glitch-svg-red {
+  0%,
+  100% {
+    filter: drop-shadow(0px 0px rgb(180, 207, 6));
   }
 
-  @mixin tablet {
-    @media (width >= 768px) and (width <= 1024px) {
-        @content;
-    }
+  50% {
+    filter: drop-shadow(-4px 0px rgb(255, 0, 0));
   }
-  
-  /* .........---ANIMATIONS---......... */
-  
-  @keyframes background-moving {
-    0% {
-      background-position: left;
-    }
-    100% {
-      background-position: right;
-    }
+}
+@keyframes glitch-svg-blue {
+  0%,
+  100% {
+    filter: drop-shadow(0px 0px rgb(13, 34, 218));
   }
-  
-  /* ...........---PADDINGS Y MARGINS GENERALES---........... */
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+  50% {
+    filter: drop-shadow(4px 0px rgb(96, 255, 255));
   }
-  
-  :root {
-    /* .........---ANCLAS SUAVES Y SCROLLBAR---......... */
-  
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-  
-    /* ...........---COLORES---........... */
-  
-    --color-primario: rgb(132, 71, 255);
-    --color-secundario: rgb(140, 255, 218);
-    --color-terceario: rgb(255, 54, 171);
-    --color-cuaternario: rgb(252, 215, 44);
-    --color-dark-mode-a: rgb(255, 255, 255);
-    --color-dark-mode-b: rgb(136, 136, 136);
-  
+}
+
+/* ...........---PADDINGS Y MARGINS GENERALES---........... */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* .........---ANCLAS SUAVES Y SCROLLBAR---......... */
+
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  /* ...........---COLORES---........... */
+
+  --color-primario: rgb(133, 71, 255);
+  --color-secundario: rgb(140, 255, 218);
+  --color-terceario: rgb(255, 54, 171);
+  --color-cuaternario: rgb(252, 215, 44);
+  --color-dark-mode-a: rgb(255, 255, 255);
+  --color-dark-mode-b: rgb(136, 136, 136);
+
   --gradient: linear-gradient(
     60deg,
     rgb(107, 243, 239),
@@ -87,45 +125,43 @@
     rgb(134, 253, 75),
     rgb(70, 246, 137)
   );
-  
-    /* ...........---MODO OSCURO---........... */
-  
-    @media (prefers-color-scheme: dark) {
-      & {
-        --color-primario: rgb(140, 255, 218);
-        --color-secundario: rgb(132, 71, 255);
-        --color-terceario: rgb(252, 215, 44);
-        --color-cuaternario: rgb(255, 54, 171);
-        --color-dark-mode-a: rgb(136, 136, 136);
-        --color-dark-mode-b: rgb(255, 255, 255);
-  
-        --gradient: linear-gradient(
-          60deg,
-          rgb(105, 19, 18),
-          rgb(93, 9, 51),
-          rgb(41, 25, 56),
-          rgb(4, 45, 58),
-          rgb(18, 64, 60),
-          rgb(71, 82, 0),
-          rgb(102, 77, 0)
-        );
-      }
+
+  /* ...........---MODO OSCURO---........... */
+
+  @media (prefers-color-scheme: dark) {
+    & {
+      --color-primario: rgb(140, 255, 218);
+      --color-secundario: rgb(132, 71, 255);
+      --color-terceario: rgb(252, 215, 44);
+      --color-cuaternario: rgb(255, 54, 171);
+      --color-dark-mode-a: rgb(136, 136, 136);
+      --color-dark-mode-b: rgb(255, 255, 255);
+
+      --gradient: linear-gradient(
+        60deg,
+        rgb(105, 19, 18),
+        rgb(93, 9, 51),
+        rgb(41, 25, 56),
+        rgb(4, 45, 58),
+        rgb(18, 64, 60),
+        rgb(71, 82, 0),
+        rgb(102, 77, 0)
+      );
     }
   }
-  
-  
-  /* .........---BACKGROUND---......... */
-  
-  body {
-    background: var(--gradient);
-    background-size: 400%;
-    animation: background-moving 25s infinite alternate;
-  }
-  
-  
-  /* .........---TEXTOS---......... */
+}
 
-  .cryptos__titulo,
+/* .........---BACKGROUND---......... */
+
+body {
+  background: var(--gradient);
+  background-size: 400%;
+  animation: background-moving 25s infinite alternate;
+}
+
+/* .........---TEXTOS---......... */
+
+.cryptos__titulo,
 .noticias__titulo,
 .formulario__titulo,
 .grafico__titulo,
@@ -143,22 +179,22 @@
   -webkit-text-stroke-width: 2px;
 }
 
-@include tablet(){
-    .titulo__cryptos {
-        padding-top: 1.9em;
-        font-size: 2rem;
-      }
+@include tablet() {
+  .titulo__cryptos {
+    padding-top: 1.9em;
+    font-size: 2rem;
+  }
 }
 
 @include mobile() {
-    .cryptos__titulo,
-    .noticias__titulo,
-    .formulario__titulo,
-    .grafico__titulo,
-    .nft__titulo,
-    h2.nft__informe {
-      padding-top: 1.9em;
-      font-size: 2.6rem;
-      text-shadow: 2px 2px rgb(0, 0, 0);
-}
+  .cryptos__titulo,
+  .noticias__titulo,
+  .formulario__titulo,
+  .grafico__titulo,
+  .nft__titulo,
+  h2.nft__informe {
+    padding-top: 1.9em;
+    font-size: 2.6rem;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+  }
 }

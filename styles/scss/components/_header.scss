@@ -1,44 +1,46 @@
 /* ------...Header...------ */
 
 .header {
-  height: 100px;
+  height: 6em;
   background: var(--gradient);
   background-size: 400%;
   animation: background-moving 15s infinite alternate;
-  padding: 0 30px;
+  padding: 0 0.3em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  border-bottom: 4px solid #000000;
+  border-bottom: 4px solid rgb(0, 0, 0);
 
   @include mobile {
-    padding: 15px;
+    padding: 1em;
   }
 
-  .logo {
-    font-family: $font-primaria;
-    font-size: 4rem;
-    text-shadow: 5px 5px #000000;
-    transition: 0.3s;
-    -webkit-text-fill-color: var(--color-terceario);
-    -webkit-text-stroke-width: 3px;
+  h1 {
+    visibility: collapse;
+  }
 
-    @include mobile {
-      font-size: 2.5rem;
-      transition: 0.8s;
-      text-shadow: 3px 3px #000000;
+  &__img {
+    height: 5em;
+    margin: 0.5em;
+
+    &--red {
+      animation: glitch-svg-red 2.5s infinite;
+    }
+
+    &--blue {
+      position: absolute;
+      animation: glitch-svg-blue 2.5s infinite;
     }
 
     @include tablet {
-      font-size: 1.7rem;
+      height: 4em;
       transition: 0.8s;
-      text-shadow: 4px 4px #000000;
     }
 
-    a {
-      color: #000000;
-      text-decoration: none;
+    @include mobile {
+      height: 3.5em;
+      transition: 0.8s;
     }
   }
 }
