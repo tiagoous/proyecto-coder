@@ -3,27 +3,36 @@
 .cryptos {
   padding: 1.25em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   gap: 3.75em;
 
-  @include tablet {
-    display: flex;
-  flex-wrap: wrap;
-  padding: 1.25em 9em;
+  @include mobile {
+    gap: 2em;
   }
 
-  @include mobile {
-    display: flex;
-  flex-wrap: wrap;
+  @include tablet {
+    gap: 2.5em;
+  }
+
+  @include notebook {
+    gap: 3em;
   }
 
   &__contenedor {
+    width: 7em;
+    height: 12em;
     background: var(--color-dark-mode-a);
     border-radius: 2px;
     transition: 0.2s;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 5px 5px rgb(0, 0, 0);
+
+    @include tv {
+      width: 9em;
+      height: 15em;
+    }
 
     &:hover {
       transform: translate(3px);
@@ -69,29 +78,47 @@
       padding: 0.65em;
 
       .icono-crypto {
-        width: 7vw;
-
-        @include tablet {
-            width: 11vw;
+        align-self: center;
+        width: 8vw;
+        
+        @include mobile {
+          width: 25vw;
         }
 
-        @include mobile {
-            width: 22vw;
+        @include tablet {
+          width: 16vw;
+        }
+
+        @include notebook {
+          width: 12vw;
+        }
+
+        @include tv {
+          width: 8.5vw;
         }
       }
 
       .texto-crypto {
+        text-align: center;
         font-family: $font-bold;
         font-size: 3rem;
         color: var(--color-primario);
         text-shadow: 2px 2px rgb(0, 0, 0);
 
-        @include tablet {
-            font-size: 2.8rem;
+        @include mobile {
+          font-size: 2.5rem;
         }
 
-        @include mobile {
-            font-size: 2rem;
+        @include tablet {
+          font-size: 2.8rem;
+        }
+
+        @include notebook {
+          font-size: 2.9em;
+        }
+
+        @include tv {
+          font-size: 3.9rem;
         }
       }
     }

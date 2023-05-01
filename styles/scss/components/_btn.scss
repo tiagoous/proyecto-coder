@@ -2,7 +2,7 @@
   
 .btn {
     background: var(--color-terceario);
-    padding: 12px 18px;
+    padding: 0.75em 1.1em;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 2px;
     box-shadow: 5px 5px rgb(0, 0, 0);
@@ -12,6 +12,11 @@
     color: rgb(0, 0, 0);
     letter-spacing: 3px;
     transition: 0.2s;
+
+    @include tv {
+      border: 5px solid rgb(0, 0, 0);
+      font-size: 2rem;
+    }
   
     &:hover {
       transform: translate(3px);

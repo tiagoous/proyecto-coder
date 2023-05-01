@@ -1,7 +1,7 @@
 /* ------...Header...------ */
 
 .header {
-  height: 6em;
+  height: 15vh;
   background: var(--gradient);
   background-size: 400%;
   animation: background-moving 15s infinite alternate;
@@ -14,6 +14,14 @@
 
   @include mobile {
     padding: 1em;
+  }
+
+  @include notebook {
+    height: 20vh;
+  }
+
+  @include tv {
+    border-bottom: 8px solid rgb(0, 0, 0);
   }
 
   h1 {
@@ -33,13 +41,18 @@
       animation: glitch-svg-blue 2.5s infinite;
     }
 
+    @include mobile {
+      height: 3.5em;
+      transition: 0.8s;
+    }
+
     @include tablet {
       height: 4em;
       transition: 0.8s;
     }
 
-    @include mobile {
-      height: 3.5em;
+    @include tv {
+      height: 7em;
       transition: 0.8s;
     }
   }

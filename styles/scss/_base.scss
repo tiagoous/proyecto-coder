@@ -46,13 +46,13 @@ $font-bold: "Canter Bold";
 }
 
 @mixin desktop {
-  @media (width >= 1024px) and (width < 1200px) {
+  @media (width >= 1024px) and (width < 1400px) {
     @content;
   }
 }
 
 @mixin tv {
-    @media (width > 1200px) {
+    @media (width >= 1400px) {
       @content;
     }
   }
@@ -143,9 +143,7 @@ $font-bold: "Canter Bold";
         rgb(93, 9, 51),
         rgb(41, 25, 56),
         rgb(4, 45, 58),
-        rgb(18, 64, 60),
-        rgb(71, 82, 0),
-        rgb(102, 77, 0)
+        rgb(18, 64, 60)
       );
     }
   }
@@ -161,30 +159,68 @@ body {
 
 /* .........---TEXTOS---......... */
 
-.cryptos__titulo,
-.noticias__titulo,
-.formulario__titulo,
-.grafico__titulo,
-.nft__titulo,
-.nft__informe,
-.equipo__titulo {
-  font-family: $font-primaria;
+.titulo {
+    font-family: $font-primaria;
   color: rgb(0, 0, 0);
   text-align: center;
-  padding: 1.25em 1.9em;
+  padding: 1em;
   font-size: 4rem;
   text-shadow: 4px 4px rgb(0, 0, 0);
   letter-spacing: 0.15rem;
   -webkit-text-fill-color: var(--color-terceario);
   -webkit-text-stroke-width: 2px;
+
+  @include mobile {
+    padding-top: 1.9em;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+  }
+
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  @include notebook {
+    font-size: 3.5rem;
+  }
+
+  @include tv {
+    font-size: 6rem;
+  }
+    &__cryptos {
+        margin: 0.2em;
+        padding: 0;
+    }
+
+    &__noticias {
+
+    }
+
+    &__grafico {
+
+    }
+
+    &__nft {
+
+
+        &--coleccion {
+
+        }
+
+        &--informe {
+
+        }
+    }
+    
+    &__formulario {
+
+    }
+    
+    &__equipo {
+
+    }
 }
 
-@include tablet() {
-  .titulo__cryptos {
-    padding-top: 1.9em;
-    font-size: 2rem;
-  }
-}
 
 @include mobile() {
   .cryptos__titulo,
@@ -193,8 +229,6 @@ body {
   .grafico__titulo,
   .nft__titulo,
   h2.nft__informe {
-    padding-top: 1.9em;
-    font-size: 2.6rem;
-    text-shadow: 2px 2px rgb(0, 0, 0);
+    
   }
 }

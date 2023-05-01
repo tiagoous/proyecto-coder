@@ -2,18 +2,14 @@
 
 .banner {
   background-image: url(../../multimedia/portada.jpg);
-  height: 90vh;
+  height: 85vh;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
 
-  @include mobile {
-    height: 85vh;
-  }
-
-  @include tablet {
-    height: 65vh;
+  @include notebook {
+    height: 80vh;
   }
 
   &::before {
@@ -21,15 +17,11 @@
     background: rgba(70, 70, 90, 0.4);
     position: absolute;
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     left: 0;
 
-    @include mobile {
-      height: 85vh;
-    }
-
-    @include tablet {
-      height: 65vh;
+    @include notebook {
+      height: 80vh;
     }
   }
 
@@ -39,7 +31,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px;
+    padding: 0 5em;
 
     span {
       text-shadow: 5px 5px rgb(0, 0, 0);
@@ -47,18 +39,40 @@
       @include mobile {
         text-shadow: 3px 3px rgb(0, 0, 0);
       }
+
+      @include tablet {
+        text-shadow: 4px 4px rgb(0, 0, 0);
+      }
+
+      @include notebook {
+        text-shadow: 4.5px 4.5px rgb(0, 0, 0);
+      }
+
+      @include tv {
+        text-shadow: 8px 8px rgb(0, 0, 0);
+      }
     }
 
     @include mobile {
-        padding: 1px;
-    margin: 5px;
-    padding: 1px;
-    margin: 5px;
+      margin: 0.32em;
+      padding: 0.05em;
     }
 
     @include tablet {
-        gap: 5px;
-    padding: 0 40px;
+      gap: 5px;
+      padding: 0 0.5em;
+    }
+
+    @include notebook {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0.5em;
+    }
+
+    @include tv {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2em;
     }
   }
 
@@ -75,13 +89,27 @@
     }
 
     @include mobile {
-        font-size: 2.5rem;
-    transition: 0.8s;
+      font-size: 2.5rem;
+      transition: 0.8s;
     }
 
     @include tablet {
-        font-size: 3.3rem;
-    transition: 0.8s;
+      font-size: 3.5rem;
+      transition: 0.8s;
+    }
+
+    @include notebook {
+      width: auto;
+      grid-column: 1/3;
+      font-size: 3.6rem;
+      transition: 0.8s;
+    }
+
+    @include tv {      
+      width: auto;
+      grid-column: 1/3;
+      font-size: 7rem;
+      transition: 0.8s;
     }
   }
 
@@ -100,14 +128,29 @@
     }
 
     @include mobile {
-        font-size: 2.45rem;
-    font-size: 2.45rem;
-    transition: 0.8s;
+      font-size: 2.5rem;
+      margin-left: 0.6em;
+      transition: 0.8s;
     }
 
     @include tablet {
-        font-size: 3.8rem;
-    transition: 0.8s;
+      font-size: 4rem;
+      margin-left: 0.5em;
+      transition: 0.8s;
+    }
+
+    @include notebook {
+      grid-column: 3/4;
+      font-size: 4.2rem;
+      margin-left: 0.25em;
+      transition: 0.8s;
+    }
+
+    @include tv {
+      grid-column: 3/4;
+      font-size: 7rem;
+      margin-left: 0.25em;
+      transition: 0.8s;
     }
   }
 }
