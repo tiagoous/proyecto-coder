@@ -14,18 +14,19 @@
     <!-- HEADER -->
 
     <header class="header">
-        <h1 class="logo"><a data-text="Ser Crypto" href="./index.html">Ser Crypto</a></h1>
+        <img class="header__img header__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><h1>Ser Crypto</h1><img class="header__img header__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
         <input type="checkbox" id="check">
-        <label for="check" class="desplegar">
+        <label for="check" class="burger burger--deploy">
             &#8801
         </label>
         <nav class="menu">
-            <a href="./noticias.html">NOTICIAS</a>
-            <a href="./coins.html">TOKENS</a>
-            <a href="./nfts.html">NFTs</a>
-            <a href="./equipo.html">EQUIPO</a>
-            <a href="./contacto.html">CONTACTANOS</a>
-            <label for="check" class="cerrar">
+            <a data-text="Home" href="../index.html">HOME</a>
+            <a data-text="Noticias" href="./noticias.html">NOTICIAS</a>
+            <a data-text="Tokens" href="./coins.html">TOKENS</a>
+            <a data-text="NFTs" href="./nfts.html">NFTs</a>
+            <a data-text="Nuestro Equipo" href="./equipo.html">EQUIPO</a>
+            <a data-text="Contacto" href="./contacto.html">CONTACTANOS</a>
+            <label for="check" class="burger burger--close">
                 &#215
             </label>
         </nav>
@@ -53,13 +54,15 @@
             </form>
         </section>
     </main>
+
+    <!-- FOOTER -->
+
     <footer class="footer">
-        <div class="footer__contenedor-arriba">
-            <a class="footer__logo logo" data-text="Ser Crypto" href="../index.html">
-                <h2>Ser Crypto</h2>
-            </a>
-            <div class="footer__pages">
+        <div class="footer__arriba">
+            <img class="footer__img footer__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><img class="footer__img footer__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
+            <div class="footer__arriba--pages">
                 <ul class="pages">
+                    <li><a data-text="Home" href="../index.html">HOME</a></li>
                     <li><a href="./noticias.html">NOTICIAS</a></li>
                     <li><a href="./coins.html">TOKENS</a></li>
                     <li><a href="./nfts.html">NFTs</a></li>
@@ -67,24 +70,29 @@
                     <li><a href="./contacto.html">CONTACTANOS</a></li>
                 </ul>
             </div>
-            <div class="footer__subscribe">
-                <h2 class="seguinos">Seguinos!</h2>
+            <div class="footer__arriba--subscribe">
+                <h2 class="follow">Seguinos!</h2>
                 <div class="rrss">
-                    <a href="#" class="rrss__icono btn btn__facebook"><img src="../icons/facebook-f.svg"
+                    <a href="https://es-la.facebook.com/" class="rrss__icono rrss__btn rrss__btn--facebook" target="_blank"><img src="../icons/facebook-f.svg"
                             alt="facebook"></a>
-                    <a href="#" class="rrss__icono btn btn__youtube"><img src="../icons/youtube.svg" alt="youtube"></a>
-                    <a href="#" class="rrss__icono btn btn__twitch"><img src="../icons/twitch.svg" alt="twitch"></a>
-                    <a href="#" class="rrss__icono btn btn__twitter"><img src="../icons/twitter.svg" alt="twitter"></a>
-                    <a href="#" class="rrss__icono btn btn__instagram"><img src="../icons/instagram.svg"
+                    <a href="https://www.youtube.com/" class="rrss__icono rrss__btn rrss__btn--youtube" target="_blank"><img src="../icons/youtube.svg"
+                            alt="youtube"></a>
+                    <a href="https://www.twitch.tv/" class="rrss__icono rrss__btn rrss__btn--twitch" target="_blank"><img src="../icons/twitch.svg"
+                            alt="twitch"></a>
+                    <a href="https://twitter.com/?lang=es" class="rrss__icono rrss__btn rrss__btn--twitter" target="_blank"><img src="../icons/twitter.svg"
+                            alt="twitter"></a>
+                    <a href="https://www.instagram.com/" class="rrss__icono rrss__btn rrss__btn--instagram" target="_blank"><img src="../icons/instagram.svg"
                             alt="instagram"></a>
-                    <a href="#" class="rrss__icono btn btn__github"><img src="../icons/github.svg" alt="github"></a>
-                    <a href="#" class="rrss__icono btn btn__tiktok"><img src="../icons/tiktok.svg" alt="tiktok"></a>
-                    <a href="#" class="rrss__icono btn btn__whatsapp"><img src="../icons/whatsapp.svg"
+                    <a href="https://github.com/" class="rrss__icono rrss__btn rrss__btn--github" target="_blank"><img src="../icons/github.svg"
+                            alt="github"></a>
+                    <a href="https://www.tiktok.com/es/" class="rrss__icono rrss__btn rrss__btn--tiktok" target="_blank"><img src="../icons/tiktok.svg"
+                            alt="tiktok"></a>
+                    <a href="https://web.whatsapp.com/" class="rrss__icono rrss__btn rrss__btn--whatsapp" target="_blank"><img src="../icons/whatsapp.svg"
                             alt="whatsapp"></a>
                 </div>
             </div>
         </div>
-        <div class="footer__contenedor-abajo">
+        <div class="footer__abajo">
             <small>&copy; 2023 <b>Ser Crypto</b> - Todos los derechos reservados.</small>
             <small><b>Powered by tiagoousdev &reg;</b></small>
         </div>

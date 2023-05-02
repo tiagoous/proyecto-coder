@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 40%;
+  width: 40vw;
   padding: 0 1.25em 1.25em;
   overflow: hidden;
   margin: 3.2em auto;
@@ -15,23 +15,26 @@
   box-shadow: 5px 5px rgb(0, 0, 0);
   justify-content: center;
 
-  @include tablet {
-    width: 80vw;
-    margin: 1.5em auto;
-  }
-
   @include mobile {
     width: 85vw;
     margin: 1.5em;
   }
 
-  &__titulo {
-    padding: 1.25em 1.9em 0 1.9em;
-
-    @include mobile {
-      padding: 1.9em 1.9em 0 1.9em;
-    }
+  @include tablet {
+    width: 80vw;
+    margin: 1.5em auto;
   }
+
+  @include notebook {
+    width: 70vw;
+    margin: 1.5em auto;
+  }
+
+  @include tv {
+    width: 70vw;
+    margin: 4em auto;
+  }
+
 
   &__contactanos {
     padding: 0 3.2em;
@@ -40,7 +43,15 @@
     overflow: hidden;
 
     @include mobile {
-      padding-top: 0;
+      padding: 0;
+    }
+
+    @include tablet {
+      padding: 0.5em;
+    }
+
+    @include notebook {
+      padding: 1em;
     }
 
     &--entrada {

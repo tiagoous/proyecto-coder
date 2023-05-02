@@ -14,18 +14,19 @@
     <!-- HEADER -->
 
     <header class="header">
-        <h1 class="logo"><a data-text="Ser Crypto" href="./index.html">Ser Crypto</a></h1>
+        <img class="header__img header__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><h1>Ser Crypto</h1><img class="header__img header__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
         <input type="checkbox" id="check">
-        <label for="check" class="desplegar">
+        <label for="check" class="burger burger--deploy">
             &#8801
         </label>
         <nav class="menu">
-            <a href="./noticias.html">NOTICIAS</a>
-            <a href="./coins.html">TOKENS</a>
-            <a href="./nfts.html">NFTs</a>
-            <a href="./equipo.html">EQUIPO</a>
-            <a href="./contacto.html">CONTACTANOS</a>
-            <label for="check" class="cerrar">
+            <a data-text="Home" href="../index.html">HOME</a>
+            <a data-text="Noticias" href="./noticias.html">NOTICIAS</a>
+            <a data-text="Tokens" href="./coins.html">TOKENS</a>
+            <a data-text="NFTs" href="./nfts.html">NFTs</a>
+            <a data-text="Nuestro Equipo" href="./equipo.html">EQUIPO</a>
+            <a data-text="Contacto" href="./contacto.html">CONTACTANOS</a>
+            <label for="check" class="burger burger--close">
                 &#215
             </label>
         </nav>
@@ -33,75 +34,119 @@
 
     <main>
         <section class="noticias">
-            <h3 class="noticias__titulo">Últimas Noticias</h3>
-            <div class="noticias__articulos">
-                <div class="card card-1">
-                    <article class="primera-noticia">
-                        <div class="card__imagen">
-                            <img src="../multimedia/bitcoin.jpg" alt="">
+            <h2 class="titulo titulo__noticias">Últimas Noticias</h2>
+            <div class="noticias__contenedor">
+                <div class="noticias__contenedor--card noticias__contenedor--card--principal">
+                    <article class="noticias__articulos noticias__articulos__principal">
+                        <div class="noticias__articulos--imagen">
+                            <img src="../multimedia/bitcoin.png" alt="Halving de Bitcoin 2024">
                         </div>
-                        <div class="arriba">
-                            <h4 class="autor">Tiago Etcheverry</h4>
-                            <a class="twiter-tag" href="#twiter">@tiagoousdev</a>
+                        <div class="noticias__articulos--autor noticias__articulos__principal--autor">
+                            <h2 class="noticias__articulos--autor--name noticias__articulos__principal--autor--name">
+                                Tiago Etcheverry</h2>
+                            <a class="noticias__articulos--autor--twitter noticias__articulos__principal--autor--twitter" href="https://twitter.com/?lang=es" target="_blank">@tiagoousdev</a>
                         </div>
-                        <p class="subtitulo">Bitcoin Halving 2024</p>
-                        <div class="abajo">
-                            <p>Bitcoin podría alcanzar un nuevo máximo histórico en las próximas semanas.</p>
-                            <h5 class="fecha">23:23 Hs / Dec 21, 2023</h5>
-                            <div class="btn">
-                                <a href="#">Seguir Leyendo</a>
+                        <h3 class="noticias__articulos--headline noticias__articulos__principal--headline">Bitcoin
+                            Halving 2024</h3>
+                        <div class="noticias__articulos--body">
+                            <p class="noticias__articulos--body--lead">Bitcoin podría alcanzar un nuevo máximo histórico
+                                en las próximas semanas.</p>
+                            <h4 class="noticias__articulos--body--date">23:23 Hs / Dec 21, 2023</h4>
+                            <div class="btn noticias__articulos--body--btn">
+                                <a href="#principal">Seguir Leyendo</a>
                             </div>
                         </div>
                     </article>
                 </div>
-                <div class="card card-2">
-                    <article class="segunda-noticia">
-                        <div class="card__imagen">
-                            <img src="../multimedia/ethereum merge.png" alt="">
+                <div class="noticias__contenedor--card noticias__contenedor--card--secundaria">
+                    <article class="noticias__articulos">
+                        <div class="noticias__articulos--imagen">
+                            <img src="../multimedia/ethereum-merge.png" alt="Merge de Ethereum">
                         </div>
-                        <div class="arriba">
-                            <h4 class="autor">Joel Garrison</h4>
-                            <a class="twiter-tag" href="#twiter">@joelsabedecryptos</a>
+                        <div class="noticias__articulos--autor">
+                            <h2 class="noticias__articulos--autor--name">Joel Garrison</h2>
+                            <a class="noticias__articulos--autor--twitter" href="https://twitter.com/?lang=es" target="_blank">@joelsabedecryptos</a>
                         </div>
-                        <p class="subtitulo">Ethereum 2.0</p>
-                        <div class="abajo">
-                            <p>A más de un año del Merge, Ethereum sigue perdiendo popularidad.</p>
-                            <h5 class="fecha">20:22 Hs / Dec 21, 2023</h5>
-                            <div class="btn">
-                                <a href="#">Seguir Leyendo</a>
+                        <h3 class="noticias__articulos--headline">Ethereum 2.0</h3>
+                        <div class="noticias__articulos--body">
+                            <p class="noticias__articulos--body--lead">A más de un año del Merge, Ethereum sigue
+                                perdiendo popularidad.</p>
+                            <h4 class="noticias__articulos--body--date">20:22 Hs / Dec 21, 2023</h4>
+                            <div class="btn noticias__articulos--body--btn">
+                                <a href="#secundaria">Seguir Leyendo</a>
                             </div>
                         </div>
                     </article>
                 </div>
-                <div class="card card-3">
-                    <article class="tercera-noticia">
-                        <div class="card__imagen">
-                            <img src="../multimedia/altcoins.jpg" alt="">
+                <div class="noticias__contenedor--card noticias__contenedor--card--tercearia">
+                    <article class="noticias__articulos">
+                        <div class="noticias__articulos--imagen">
+                            <img src="../multimedia/altcoins.jpg" alt="Altcoins mejoran cotizacion">
                         </div>
-                        <div class="arriba">
-                            <h4 class="autor">Monica Rosales</h4>
-                            <a class="twiter-tag" href="#twiter">@monyrosales</a>
+                        <div class="noticias__articulos--autor">
+                            <h2 class="noticias__articulos--autor--name">Monica Rosales</h2>
+                            <a class="noticias__articulos--autor--twitter" href="https://twitter.com/?lang=es" target="_blank">@monyrosales</a>
                         </div>
-                        <p class="subtitulo">Altcoins en alza</p>
-                        <div class="abajo">
-                            <p>Las Altcoins reaccionan positivamente a las nuevas proyecciones de inflación en EEUU.</p>
-                            <h5 class="fecha">15:47 Hs / Dec 21, 2023</h5>
-                            <div class="btn">
-                                <a href="#">Seguir Leyendo</a>
+                        <h3 class="noticias__articulos--headline">Altcoins en alza</h3>
+                        <div class="noticias__articulos--body">
+                            <p class="noticias__articulos--body--lead">Las Altcoins reaccionan positivamente a las
+                                nuevas proyecciones de inflación en EEUU.</p>
+                            <h4 class="noticias__articulos--body--date">15:47 Hs / Dec 21, 2023</h4>
+                            <div class="btn noticias__articulos--body--btn">
+                                <a href="#tercearia">Seguir Leyendo</a>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
+        <section class="desarrollo__noticias">
+            <div class="desarrollo__noticias--articulo">
+                <article class="desarrollo__noticias--articulo__principal" id="principal">
+                    <h3 class="titulo titulo__desarrollo">Bitcoin Halving 2024</h3>
+                    <p>En un emocionante desarrollo para los entusiastas de las criptomonedas, el renombrado periodista y experto en criptomonedas, Malik Marmaduk, ha expresado su confianza en que Bitcoin está en camino de alcanzar un nuevo máximo histórico en las próximas semanas. Sus afirmaciones han generado un gran revuelo en la comunidad financiera, ya que Bitcoin ha sido objeto de una atención significativa debido a su volatilidad y su impacto en el mercado.</p>
+                    <p>Malik Marmaduk ha basado su predicción en una serie de factores clave. En primer lugar, ha destacado el aumento constante del interés institucional en Bitcoin, con grandes empresas e inversores institucionales que continúan mostrando un creciente apetito por esta criptomoneda líder. La entrada de jugadores de renombre en el espacio de las criptomonedas ha llevado a un aumento en la adopción y ha impulsado la confianza de los inversores.</p>
+                    <p>Además, el experto ha resaltado el desarrollo y la adopción de tecnologías relacionadas con Bitcoin, como la red Lightning, que ha mejorado la escalabilidad y eficiencia de las transacciones. Estos avances tecnológicos están allanando el camino para una mayor utilidad de Bitcoin en el comercio cotidiano, lo que a su vez impulsa la demanda y su valor.</p>
+                    <p>Otro factor importante mencionado por el experto es el halving de Bitcoin, un evento programado que reduce a la mitad la recompensa que los mineros reciben por validar transacciones en la red. Según el análisis del experto, estos halvings anteriores han llevado a un aumento significativo en el precio de Bitcoin a largo plazo, ya que la oferta disminuye mientras que la demanda continúa creciendo.</p>
+                    <p>Sin embargo, el experto también ha destacado la importancia de tener en cuenta la naturaleza volátil del mercado de las criptomonedas y ha instado a los inversores a ser cautelosos y realizar su propia investigación antes de tomar decisiones de inversión.</p>
+                    <p>A medida que Bitcoin se acerca a un posible nuevo máximo histórico, los ojos de la comunidad financiera están puestos en el futuro de esta criptomoneda líder. Si las predicciones del experto se cumplen, este hito histórico podría marcar un nuevo capítulo en la evolución y adopción de las criptomonedas en todo el mundo.</p>
+                    <p>Bitcoin continúa desarrollándose y los inversores están ansiosos por ver si este nuevo máximo histórico se materializa en las próximas semanas. Manténgase atento a las últimas actualizaciones mientras seguimos de cerca esta emocionante evolución en el mercado de las criptomonedas.</p>
+                </article>
+            </div>
+            <div class="desarrollo__noticias--articulo">
+                <article class="desarrollo__noticias--articulo__secundaria" id="secundaria">
+                    <h3 class="titulo titulo__desarrollo">Ethereum 2.0</h3>
+                    <p>El reconocido periodista y experto en minería de criptomonedas, George Smith, ha revelado que, a más de un año de la implementación del Merge, Ethereum está experimentando una pérdida continua de popularidad. Sus declaraciones han generado un intenso debate en la comunidad criptográfica, ya que Ethereum ha sido durante mucho tiempo uno de los nombres más prominentes en el mundo de las criptomonedas.</p>
+                    <p>El experto, cuya experiencia en el ámbito de la minería de criptomonedas es ampliamente reconocida, ha fundamentado su afirmación en una serie de factores clave. En primer lugar, ha destacado los desafíos que Ethereum ha enfrentado en términos de escalabilidad y tarifas de transacción. A pesar de los esfuerzos para abordar estos problemas, incluida la tan esperada implementación del Merge, que fusiona la red Ethereum 1.0 y la Ethereum 2.0, el experto señala que los resultados no han sido tan positivos como se esperaba.</p>
+                    <p>También ha destacado la creciente competencia en el mercado de las criptomonedas. Con el surgimiento de otras plataformas blockchain y contratos inteligentes, como Binance Smart Chain y Solana, Ethereum ha perdido su dominio como la opción preferida para aplicaciones descentralizadas (dApps) y proyectos basados en contratos inteligentes. La falta de mejoras significativas en términos de rendimiento y costos ha llevado a muchos desarrolladores y usuarios a buscar alternativas más eficientes y económicas.</p>
+                    <p>Además, ha mencionado los desafíos asociados con la transición de Ethereum a la prueba de participación (Proof-of-Stake, PoS) como parte del proceso de fusión. Si bien la PoS se considera una solución más sostenible desde el punto de vista medioambiental, algunos mineros y usuarios pueden haber perdido interés debido a la eliminación del sistema de recompensas basado en la prueba de trabajo (Proof-of-Work, PoW).</p>
+                    <p>A pesar de estas preocupaciones, también ha enfatizado que Ethereum sigue siendo una plataforma líder en términos de adopción y desarrollo de aplicaciones descentralizadas. La red cuenta con una amplia comunidad de desarrolladores y proyectos establecidos, lo que brinda una base sólida para futuras mejoras y evoluciones.</p>
+                    <p>A medida que Ethereum continúa lidiando con estos desafíos y busca recuperar su popularidad perdida, los inversores y usuarios están atentos a las próximas actualizaciones y mejoras en la red. Así mismo, ha instado a la comunidad a seguir de cerca el desarrollo de Ethereum, ya que podría presentar oportunidades interesantes para aquellos dispuestos a navegar por los desafíos actuales.</p>
+                    <p>La historia de Ethereum es una montaña rusa de altibajos, y la pérdida de popularidad experimentada hasta ahora es un nuevo desafío para esta criptomoneda líder. Manténgase actualizado mientras seguimos explorando el impacto de estos cambios en la industria de las criptomonedas.</p>
+                </article>
+            </div>
+            <div class="desarrollo__noticias--articulo">
+                <article class="desarrollo__noticias--articulo__tercearia" id="tercearia">
+                    <h3 class="titulo titulo__desarrollo">Altcoins en alza</h3>
+                    <p>En una emocionante respuesta al panorama económico en constante cambio, las Altcoins, también conocidas como criptomonedas alternativas, han mostrado una reacción positiva a las recientes proyecciones de inflación en Estados Unidos. El periodista financiero Rodolfo Rodolfus, ampliamente reconocido por su experiencia en el ámbito de las criptomonedas, ha destacado el creciente interés en las Altcoins como resultado de las expectativas inflacionarias en el país norteamericano.</p>
+                    <p>Según el experto, las proyecciones de inflación más altas de lo esperado en Estados Unidos han generado incertidumbre en los mercados tradicionales y han llevado a los inversores a buscar alternativas de refugio de valor. En este contexto, las Altcoins han emergido como una opción atractiva para muchos, ya que ofrecen una mayor flexibilidad y potencial de crecimiento en comparación con las criptomonedas más establecidas, como Bitcoin y Ethereum.</p>
+                    <p>El experto ha señalado que las Altcoins se han beneficiado del aumento del interés y la atención que han recibido en los últimos meses. Con el crecimiento y desarrollo de proyectos innovadores en el ámbito de las finanzas descentralizadas (DeFi), tokens no fungibles (NFT) y otras aplicaciones especializadas, las Altcoins están ganando terreno y atrayendo a inversores y entusiastas por igual.</p>
+                    <p>Además, el experto ha resaltado el papel de las Altcoins en la diversificación de las carteras de inversión. A medida que los inversores buscan opciones más allá de Bitcoin y Ethereum, las Altcoins ofrecen una gama diversa de oportunidades de inversión con diferentes niveles de riesgo y recompensa. Esta diversificación puede ayudar a proteger las carteras de inversión en tiempos de volatilidad y proporcionar oportunidades para obtener ganancias significativas.</p>
+                    <p>Si bien Rodolfus ha enfatizado las oportunidades que ofrecen las Altcoins, también ha destacado la importancia de la investigación y el análisis cuidadosos antes de invertir en cualquier criptomoneda. El mercado de las criptomonedas sigue siendo altamente volátil y presenta riesgos inherentes, por lo que es crucial que los inversores comprendan plenamente los proyectos y las perspectivas de crecimiento de las Altcoins en las que están interesados.</p>
+                    <p>A medida que las Altcoins continúan experimentando un impulso positivo en respuesta a las proyecciones de inflación en Estados Unidos, los inversores están atentos a las últimas tendencias y desarrollos en este emocionante mercado. Manténgase informado mientras exploramos las oportunidades y desafíos que las Altcoins presentan en el panorama financiero actual.</p>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <!-- FOOTER -->
+
     <footer class="footer">
-        <div class="footer__contenedor-arriba">
-            <a class="footer__logo logo" data-text="Ser Crypto" href="../index.html">
-                <h2>Ser Crypto</h2>
-            </a>
-            <div class="footer__pages">
+        <div class="footer__arriba">
+            <img class="footer__img footer__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><img class="footer__img footer__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
+            <div class="footer__arriba--pages">
                 <ul class="pages">
+                    <li><a data-text="Home" href="../index.html">HOME</a></li>
                     <li><a href="./noticias.html">NOTICIAS</a></li>
                     <li><a href="./coins.html">TOKENS</a></li>
                     <li><a href="./nfts.html">NFTs</a></li>
@@ -109,24 +154,29 @@
                     <li><a href="./contacto.html">CONTACTANOS</a></li>
                 </ul>
             </div>
-            <div class="footer__subscribe">
-                <h2 class="seguinos">Seguinos!</h2>
+            <div class="footer__arriba--subscribe">
+                <h2 class="follow">Seguinos!</h2>
                 <div class="rrss">
-                    <a href="#" class="rrss__icono btn btn__facebook"><img src="../icons/facebook-f.svg"
+                    <a href="https://es-la.facebook.com/" class="rrss__icono rrss__btn rrss__btn--facebook" target="_blank"><img src="../icons/facebook-f.svg"
                             alt="facebook"></a>
-                    <a href="#" class="rrss__icono btn btn__youtube"><img src="../icons/youtube.svg" alt="youtube"></a>
-                    <a href="#" class="rrss__icono btn btn__twitch"><img src="../icons/twitch.svg" alt="twitch"></a>
-                    <a href="#" class="rrss__icono btn btn__twitter"><img src="../icons/twitter.svg" alt="twitter"></a>
-                    <a href="#" class="rrss__icono btn btn__instagram"><img src="../icons/instagram.svg"
+                    <a href="https://www.youtube.com/" class="rrss__icono rrss__btn rrss__btn--youtube" target="_blank"><img src="../icons/youtube.svg"
+                            alt="youtube"></a>
+                    <a href="https://www.twitch.tv/" class="rrss__icono rrss__btn rrss__btn--twitch" target="_blank"><img src="../icons/twitch.svg"
+                            alt="twitch"></a>
+                    <a href="https://twitter.com/?lang=es" class="rrss__icono rrss__btn rrss__btn--twitter" target="_blank"><img src="../icons/twitter.svg"
+                            alt="twitter"></a>
+                    <a href="https://www.instagram.com/" class="rrss__icono rrss__btn rrss__btn--instagram" target="_blank"><img src="../icons/instagram.svg"
                             alt="instagram"></a>
-                    <a href="#" class="rrss__icono btn btn__github"><img src="../icons/github.svg" alt="github"></a>
-                    <a href="#" class="rrss__icono btn btn__tiktok"><img src="../icons/tiktok.svg" alt="tiktok"></a>
-                    <a href="#" class="rrss__icono btn btn__whatsapp"><img src="../icons/whatsapp.svg"
+                    <a href="https://github.com/" class="rrss__icono rrss__btn rrss__btn--github" target="_blank"><img src="../icons/github.svg"
+                            alt="github"></a>
+                    <a href="https://www.tiktok.com/es/" class="rrss__icono rrss__btn rrss__btn--tiktok" target="_blank"><img src="../icons/tiktok.svg"
+                            alt="tiktok"></a>
+                    <a href="https://web.whatsapp.com/" class="rrss__icono rrss__btn rrss__btn--whatsapp" target="_blank"><img src="../icons/whatsapp.svg"
                             alt="whatsapp"></a>
                 </div>
             </div>
         </div>
-        <div class="footer__contenedor-abajo">
+        <div class="footer__abajo">
             <small>&copy; 2023 <b>Ser Crypto</b> - Todos los derechos reservados.</small>
             <small><b>Powered by tiagoousdev &reg;</b></small>
         </div>
