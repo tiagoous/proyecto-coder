@@ -1,0 +1,26 @@
+// SLIDER
+
+.crypto__slider {
+  &--slider {
+    width: 100vw;
+    margin-top: 0.8em;
+    overflow: hidden;
+    background-color: rgb(100, 100, 100, 0.5);
+
+    .slide-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+      -webkit-animation: scroll 40s linear infinite;
+      width: calc(200px * 12);
+
+      .slide {
+        width: 200px;
+        margin: 0.5em 1em;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

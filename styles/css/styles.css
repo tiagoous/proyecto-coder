@@ -41,6 +41,16 @@
     filter: drop-shadow(4px 0px rgb(96, 255, 255));
   }
 }
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1200px);
+    transform: translateX(-1200px);
+  }
+}
 /* ...........---PADDINGS Y MARGINS GENERALES---........... */
 *,
 *::before,
@@ -89,7 +99,7 @@ body {
   text-align: center;
   padding: 1em;
   font-size: 4rem;
-  text-shadow: 4px 4px rgb(0, 0, 0);
+  text-shadow: 1px 1px rgb(0, 0, 0), 2.5px 2.5px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 5.5px 5.5px rgb(44, 252, 141), 7px 7px rgb(0, 0, 0), 8.5px 8.5px rgb(252, 215, 44), 10px 10px rgb(0, 0, 0);
   letter-spacing: 0.15rem;
   -webkit-text-fill-color: var(--color-primario);
   -webkit-text-stroke-width: 2px;
@@ -126,13 +136,8 @@ body {
   padding: 0;
 }
 .titulo__nft--coleccion {
-  font-family: "Tusker Grotesk";
-  font-size: 3rem;
   padding: 0.5em;
-  justify-self: center;
   align-self: center;
-  -webkit-text-fill-color: var(--color-primario);
-  -webkit-text-stroke-width: 0;
   grid-column: 3/4;
 }
 @media (width < 480px) {
@@ -155,21 +160,6 @@ body {
 @media (width >= 1400px) {
   .titulo__nft--coleccion {
     font-size: 3.5rem;
-  }
-}
-.titulo__nft--informe {
-  grid-column: 1/3;
-  grid-row: 1/3;
-  font-size: 6rem;
-  padding: 7em 0;
-  align-self: stretch;
-  background: var(--color-primario);
-  border-right: 2px solid rgb(0, 0, 0);
-  border-bottom: 2px solid rgb(0, 0, 0);
-}
-@media (width < 480px) {
-  .titulo__nft--informe {
-    max-height: 30vh;
   }
 }
 .titulo__formulario {
@@ -562,7 +552,7 @@ body {
   padding: 0.75em 1.1em;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
   font-family: "Tusker Grotesk Light";
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -584,6 +574,26 @@ body {
 .btn a, .footer__arriba--subscribe .rrss__btn a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+}
+
+.crypto__slider--slider {
+  width: 100vw;
+  margin-top: 0.8em;
+  overflow: hidden;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+.crypto__slider--slider .slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: 2400px;
+}
+.crypto__slider--slider .slide-track .slide {
+  width: 200px;
+  margin: 0.5em 1em;
+}
+.crypto__slider--slider .slide-track .slide img {
+  width: 100%;
 }
 
 /* ...........---Footer Styles---........... */
@@ -877,7 +887,7 @@ body {
   margin: 0.65em 0 1.9em 0;
   border: solid 2px rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width >= 480px) and (width < 768px) {
   .grafico__background {
@@ -950,7 +960,7 @@ body {
   transition: 0.2s;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width < 480px) {
   .noticias__contenedor--card {
@@ -1296,7 +1306,7 @@ body {
   transition: 0.2s;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 .desarrollo__noticias--articulo p {
   margin: 1em;
@@ -1312,6 +1322,7 @@ body {
   padding: 1.25em;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 1em;
   justify-content: center;
   text-align: center;
   gap: 3.75em;
@@ -1338,14 +1349,12 @@ body {
   border-radius: 2px;
   transition: 0.2s;
   border: 2px solid rgb(0, 0, 0);
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width >= 1400px) {
   .cryptos__contenedor {
     width: 9em;
     height: 15em;
-    border: 4px solid rgb(0, 0, 0);
-    box-shadow: 8px 8px rgb(0, 0, 0);
   }
 }
 .cryptos__contenedor:hover {
@@ -1390,7 +1399,7 @@ body {
 }
 .cryptos__contenedor a .icono-crypto {
   align-self: center;
-  width: 8vw;
+  width: 5em;
 }
 .cryptos__contenedor a .texto-crypto {
   text-align: center;
@@ -1403,6 +1412,124 @@ body {
   .cryptos__contenedor a .texto-crypto {
     text-shadow: 3px 3px rgb(0, 0, 0);
   }
+}
+
+.cryptos__about--cryptos {
+  padding: 1.25em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 3em;
+}
+@media (width < 480px) {
+  .cryptos__about--cryptos {
+    gap: 2em;
+  }
+}
+@media (width >= 480px) and (width < 768px) {
+  .cryptos__about--cryptos {
+    gap: 2.5em;
+  }
+}
+@media (width >= 768px) and (width < 1024px) {
+  .cryptos__about--cryptos {
+    gap: 3em;
+  }
+}
+.cryptos__about--cryptos__contenedor {
+  width: 40vw;
+  height: fit-content;
+  margin: 0 3em;
+  background: var(--color-dark-mode-a);
+  border-radius: 2px;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
+}
+@media (width >= 1400px) {
+  .cryptos__about--cryptos__contenedor {
+    border: 4px solid rgb(0, 0, 0);
+    box-shadow: 4px 4px rgb(201, 26, 108), 8px 8px rgb(0, 0, 0), 12px 12px rgb(44, 252, 141), 16px 16px rgb(0, 0, 0), 20px 20px rgb(71, 73, 183), 24px 24px rgb(0, 0, 0);
+  }
+}
+.cryptos__about--cryptos__contenedor--color {
+  height: 1.9em;
+  border-bottom: solid 2px rgb(0, 0, 0);
+}
+@media (width >= 1400px) {
+  .cryptos__about--cryptos__contenedor--color {
+    border-bottom: solid 4px rgb(0, 0, 0);
+  }
+}
+.cryptos__about--cryptos__contenedor--color--btc {
+  background: rgb(255, 157, 0);
+}
+.cryptos__about--cryptos__contenedor--color--eth {
+  background: rgb(160, 212, 223);
+}
+.cryptos__about--cryptos__contenedor--color--usdt {
+  background: rgb(44, 252, 141);
+}
+.cryptos__about--cryptos__contenedor--color--rvn {
+  background: rgb(71, 73, 183);
+}
+.cryptos__about--cryptos__contenedor--color--dot {
+  background: rgb(201, 26, 108);
+}
+.cryptos__about--cryptos__contenedor--color--bnb {
+  background: rgb(252, 215, 44);
+}
+.cryptos__about--cryptos__contenedor--body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  padding: 0.65em;
+}
+.cryptos__about--cryptos__contenedor--body .icono-crypto {
+  justify-self: center;
+  align-self: center;
+  width: 5em;
+}
+.cryptos__about--cryptos__contenedor--body .subtitulo--crypto {
+  text-align: center;
+  font-family: "Canter Bold";
+  font-size: 3rem;
+  color: var(--color-primario);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+@media (width >= 1400px) {
+  .cryptos__about--cryptos__contenedor--body .subtitulo--crypto {
+    text-shadow: 3px 3px rgb(0, 0, 0);
+  }
+}
+.cryptos__about--cryptos__contenedor--body .parrafo--crypto {
+  font-family: "Canter Light";
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  grid-column: 1/3;
+}
+.cryptos__about--cryptos .contenedor__bitcoin {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.cryptos__about--cryptos .contenedor__ethereum {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.cryptos__about--cryptos .contenedor__tether {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.cryptos__about--cryptos .contenedor__ravencoin {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.cryptos__about--cryptos .contenedor__polkadot {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.cryptos__about--cryptos .contenedor__binance {
+  grid-column: 2/3;
+  grid-row: 4/5;
 }
 
 /* ------...NFTs...------ */
@@ -1444,7 +1571,7 @@ body {
   background-position: center;
   border: solid 2px rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width < 480px) {
   .nft__contenedor {
@@ -1509,75 +1636,79 @@ body {
     display: none;
   }
 }
-.nft .informe__parrafo-top,
-.nft .informe__parrafo-middle,
-.nft .informe__parrafo-bottom {
-  justify-self: center;
-  align-self: center;
-  padding: 0.5em;
+
+.nfts__about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
 }
-@media (width < 480px) {
-  .nft .informe__parrafo-top,
-  .nft .informe__parrafo-middle,
-  .nft .informe__parrafo-bottom {
-    padding: 0.32em;
-  }
-}
-.nft .nft__contenedor-informe {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+.nfts__about--contenedor {
+  display: flex;
+  flex-direction: column;
   width: 80vw;
-  margin: 1.9em auto;
+}
+.nfts__about--contenedor__informe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
   background: rgb(255, 255, 255);
-  background-size: cover;
-  background-position: center;
   border: solid 2px rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
-@media (width < 480px) {
-  .nft .nft__contenedor-informe {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-  }
-}
-.nft .nft__contenedor-informe img {
-  max-width: 20vw;
-  justify-self: center;
-  align-self: center;
-  padding: 0.9em;
-}
-@media (width < 480px) {
-  .nft .nft__contenedor-informe img {
-    max-width: 60vw;
-  }
-}
-.nft .nft__contenedor-informe p {
+.nfts__about--contenedor__informe--parrafo {
   font-family: "Canter Bold";
-  font-size: 1.8rem;
+  margin: 1em;
+  font-size: 3rem;
 }
-@media (width < 480px) {
-  .nft .nft__contenedor-informe p {
-    font-size: 1.5rem;
-    letter-spacing: 0.05rem;
-  }
+.nfts__about--card {
+  position: relative;
+  width: 19em;
+  height: 22em;
+  margin: 1em;
+  box-shadow: 4px 4px rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 1em 1em 4em 1em;
+}
+.nfts__about--card:nth-of-type(even) {
+  transform: rotate(-6deg);
+}
+.nfts__about--card:nth-of-type(odd) {
+  transform: rotate(6deg);
+}
+.nfts__about--card img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 2px rgb(0, 0, 0);
+  object-fit: cover;
 }
 
-.informe__parrafo-top {
-  grid-column: 3/6;
+/* About */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.informe__imagen {
-  grid-column: 3/4;
+.about h2 {
+  padding: 0.3em;
 }
-
-.informe__parrafo-middle {
-  grid-column: 4/6;
+.about__contenedor {
+  margin: 1em;
+  width: 80vw;
+  font-family: "Canter Bold";
+  font-size: 2rem;
+  background: var(--color-dark-mode-a);
+  transition: 0.2s;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2px;
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
-
-.informe__parrafo-bottom {
-  grid-column: 1/6;
+.about__contenedor p {
+  margin: 0.5em;
 }
 
 /* Equipo */
@@ -1588,6 +1719,7 @@ body {
   justify-content: center;
   margin: 0.5em;
   padding: 0.5em;
+  gap: 3em;
 }
 .equipo__contenedor--tarjeta {
   position: relative;
@@ -1725,7 +1857,7 @@ body {
   margin: 3.2em auto;
   border: solid 2px rgb(0, 0, 0);
   border-radius: 2px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
   justify-content: center;
 }
 @media (width < 480px) {

@@ -14,7 +14,9 @@
     <!-- HEADER -->
 
     <header class="header">
-        <img class="header__img header__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><h1>Ser Crypto</h1><img class="header__img header__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
+        <img class="header__img header__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red">
+        <h1>Ser Crypto</h1><img class="header__img header__img--blue" src="../multimedia/ser-crypto-logo.svg"
+            alt="logo blue">
         <input type="checkbox" id="check">
         <label for="check" class="burger burger--deploy">
             &#8801
@@ -34,16 +36,305 @@
 
     <main>
 
-        <section>
+        <!-- CRYPTOS -->
 
+        <section class="tokens">
+            <h2 class="titulo titulo__cryptos">Los Más Buscados</h2>
+            <div class="cryptos">
+                <div class="cryptos__contenedor">
+                    <div class="cryptos__contenedor--color cryptos__contenedor--color--btc"></div>
+                    <a href="#bitcoin">
+                        <img class="icono-crypto" src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        <h3 class="texto-crypto">BTC</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="cryptos__contenedor--color cryptos__contenedor--color--eth"></div>
+                    <a href="#ethereum">
+                        <img class="icono-crypto" src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        <h3 class="texto-crypto">ETH</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="cryptos__contenedor--color cryptos__contenedor--color--usdt"></div>
+                    <a href="#tether">
+                        <img class="icono-crypto" src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        <h3 class="texto-crypto">USDT</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="cryptos__contenedor--color cryptos__contenedor--color--rvn"></div>
+                    <a href="#ravencoin">
+                        <img class="icono-crypto" src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        <h3 class="texto-crypto">RVN</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="cryptos__contenedor--color cryptos__contenedor--color--dot"></div>
+                    <a href="#polkadot">
+                        <img class="icono-crypto" src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        <h3 class="texto-crypto">DOT</h3>
+                    </a>
+                </div>
+                <div class="cryptos__contenedor">
+                    <div class="cryptos__contenedor--color cryptos__contenedor--color--bnb"></div>
+                    <a href="#bnb">
+                        <img class="icono-crypto" src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        <h3 class="texto-crypto">BNB</h3>
+                    </a>
+                </div>
+            </div>
         </section>
+
+        <!--CRYPTOS ABOUT  -->
+
+        <section class="cryptos__about">
+            <div class="cryptos__about--cryptos">
+                <div class="cryptos__about--cryptos__contenedor contenedor__bitcoin">
+                    <div id="bitcoin" class="cryptos__about--cryptos__contenedor--color cryptos__contenedor--color--btc"></div>
+                    <div class="cryptos__about--cryptos__contenedor--body">
+                        <h3 class="subtitulo--crypto">Bitcoin</h3>
+                        <img class="icono-crypto" src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        <p class="parrafo--crypto">
+                            Bitcoin es una moneda virtual o un medio de intercambio electrónico que sirve para adquirir
+                            productos y servicios como cualquier otra moneda.
+
+                            Pero esta moneda es descentralizada, es decir que no existe una autoridad o ente de control
+                            que sea responsable de su emisión y registro de sus movimientos.
+
+                            Consiste en una clave criptográfica que se asocia a un monedero virtual, el cual descuenta y
+                            recibe pagos.
+                        </p>
+                    </div>
+                </div>
+                <div class="cryptos__about--cryptos__contenedor contenedor__ethereum">
+                    <div id="ethereum" class="cryptos__about--cryptos__contenedor--color cryptos__contenedor--color--eth"></div>
+                    <div class="cryptos__about--cryptos__contenedor--body">
+                        <h3 class="subtitulo--crypto">Ethereum</h3>
+                        <img class="icono-crypto" src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        <p class="parrafo--crypto">
+                            Ethereum funciona como una plataforma de código abierto basada en la tecnología blockchain.
+                            Este
+                            blockchain se aloja en muchos ordenadores del mundo, por lo que está descentralizado. Cada
+                            ordenador cuenta con una copia del blockchain y debe haber un acuerdo generalizado antes de
+                            aplicar cualquier cambio en la red.
+                            El blockchain de ethereum es similar al del bitcoin en el sentido de que funciona también
+                            como
+                            registro del historial de transacciones. No obstante, los desarrolladores también pueden
+                            construir y desplegar aplicaciones descentralizadas o «dapps» con la red de ethereum. Estas
+                            también se almacenan en el blockchain junto al registro de las transacciones.
+                        </p>
+                    </div>
+                </div>
+                <div class="cryptos__about--cryptos__contenedor contenedor__tether">
+                    <div id="tether" class="cryptos__about--cryptos__contenedor--color cryptos__contenedor--color--usdt"></div>
+                    <div class="cryptos__about--cryptos__contenedor--body">
+                        <h3 class="subtitulo--crypto">Tether - USDT</h3>
+                        <img class="icono-crypto" src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        <p class="parrafo--crypto">
+                            Tether es una stablecoin o moneda estable, aunque al mismo tiempo también es una
+                            criptomoneda.
+                            Lo que diferencia a esta divisa digital con el resto de monedas, como bitcoin o ethereum, es
+                            que
+                            su misión es replicar el precio del dólar esto significa que un USDT, el nombre del token,
+                            siempre será equivalente a un dólar.
+                        </p>
+                    </div>
+                </div>
+                <div class="cryptos__about--cryptos__contenedor contenedor__ravencoin">
+                    <div id="ravencoin" class="cryptos__about--cryptos__contenedor--color cryptos__contenedor--color--rvn"></div>
+                    <div class="cryptos__about--cryptos__contenedor--body">
+                        <h3 class="subtitulo--crypto">Ravencoin</h3>
+                        <img class="icono-crypto" src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        <p class="parrafo--crypto">
+                            Ravencoin se basa en una versión de código abierto de la todopoderosa blockchain de Bitcoin.
+                            Básicamente, esto significa que los desarrolladores detrás de RVN tomaron el código detrás
+                            de
+                            Bitcoin y lo ajustaron para hacerlo adecuado a lo que querían hacer.
+
+                            Ravencoin se basa en la minería de criptomonedas, también conocida como proof-of-work, en
+                            lugar
+                            de la estaca, o proof-of-stake. Para minar RVN, la gente tiene que utilizar sus ordenadores
+                            para
+                            resolver una serie de ecuaciones que se vuelven progresivamente más difíciles.
+
+                            La idea detrás de la criptografía era permitir que cualquiera que la utilizara emitiera sus
+                            propios tokens de criptografía por cualquier motivo, siempre que ese motivo fuera un medio
+                            de
+                            transferencia. Los protocolos de RVN, según afirman sus responsables, pretenden ayudar a
+                            descentralizar su uso. Una de las formas en las que Ravencoin dice que apoya la
+                            descentralización es que no utiliza nodos u ordenadores que ayuden a que los procesos que
+                            implican a RVN avancen. Muchas redes de criptomonedas utilizan nodos y pagan recompensas a
+                            las
+                            personas que sirven de nodos, pero Ravencoin no lo hace.
+                        </p>
+                    </div>
+                </div>
+                <div class="cryptos__about--cryptos__contenedor contenedor__polkadot">
+                    <div id="polkadot" class="cryptos__about--cryptos__contenedor--color cryptos__contenedor--color--dot"></div>
+                    <div class="cryptos__about--cryptos__contenedor--body">
+                        <h3 class="subtitulo--crypto">Polkadot</h3>
+                        <img class="icono-crypto" src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        <p class="parrafo--crypto">
+                            Polkadot es un mecanismo de retransmisión que facilita las transacciones autenticadas de una
+                            cadena de bloques a otra. Proporciona seguridad compartida que es igual para todos los
+                            miembros,
+                            independientemente del protocolo que utilicen. En segundo lugar, permite transacciones sin
+                            confianza entre todas sus cadenas de miembros. Una intercadena que actúa como un conjunto de
+                            mensajes seguros entre blockchains.
+
+                            Permite nuevos diseños de blockchains para comunicarse y poner en común su seguridad al
+                            tiempo
+                            que les permite tener funciones de transición de estado completamente arbitrarias. Esto abre
+                            la
+                            puerta a un "internet" de blockchains, donde las cadenas privadas y de consorcios pueden ser
+                            cortadas de cadenas abiertas y públicas como Ethereum sin perder la capacidad de comunicarse
+                            con
+                            ellas en sus propios términos, a diferencia de la sinergia de intranet / internet que vemos
+                            hoy.
+                        </p>
+                    </div>
+                </div>
+                <div class="cryptos__about--cryptos__contenedor contenedor__binance">
+                    <div id="bnb" class="cryptos__about--cryptos__contenedor--color cryptos__contenedor--color--bnb"></div>
+                    <div class="cryptos__about--cryptos__contenedor--body">
+                        <h3 class="subtitulo--crypto">Binance Smart Chain - BNB</h3>
+                        <img class="icono-crypto" src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        <p class="parrafo--crypto">
+                            BNB es una criptomoneda emitida por el exchange de criptomonedas Binance. Fue creada en 2017
+                            y
+                            se utiliza principalmente para pagar tarifas de transacción en la plataforma de intercambio
+                            Binance. Los usuarios pueden utilizar BNB para pagar las tarifas de negociación, retiradas y
+                            otras tarifas en la plataforma, y recibir un descuento en las tarifas si utilizan BNB en
+                            lugar
+                            de otras monedas.
+
+                            Además de su uso en la plataforma de intercambio Binance, BNB también se utiliza como una
+                            forma
+                            de inversión, ya que su valor puede fluctuar con el precio del mercado. En resumen, BNB es
+                            una
+                            criptomoneda emitida por Binance para facilitar las transacciones y pagar las tarifas en su
+                            plataforma, y también puede ser utilizada como un activo de inversión.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRAFICO -->
+
+        <section class="grafico">
+            <h3 class="titulo titulo__grafico">Cotizacion hoy</h3>
+            <div class="grafico__background"></div>
+        </section>
+
+        <!-- SLIDER CRYPTO -->
+
+        <section class="crypto__slider">
+            <div class="crypto__slider--slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <a href="#binance" target="_blank">
+                            <img src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#ethereum" target="_blank">
+                            <img src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#tether" target="_blank">
+                            <img src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#ravencoin" target="_blank">
+                            <img src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#polkadot" target="_blank">
+                            <img src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#bnb" target="_blank">
+                            <img src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#binance" target="_blank">
+                            <img src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#ethereum" target="_blank">
+                            <img src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#tether" target="_blank">
+                            <img src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#ravencoin" target="_blank">
+                            <img src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#polkadot" target="_blank">
+                            <img src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#bnb" target="_blank">
+                            <img src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#binance" target="_blank">
+                            <img src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#ethereum" target="_blank">
+                            <img src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#tether" target="_blank">
+                            <img src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#ravencoin" target="_blank">
+                            <img src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#polkadot" target="_blank">
+                            <img src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#bnb" target="_blank">
+                            <img src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
-    
+
     <footer class="footer">
         <div class="footer__arriba">
-            <img class="footer__img footer__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><img class="footer__img footer__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
+            <img class="footer__img footer__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><img
+                class="footer__img footer__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
             <div class="footer__arriba--pages">
                 <ul class="pages">
                     <li><a data-text="Home" href="../index.html">HOME</a></li>
@@ -57,22 +348,22 @@
             <div class="footer__arriba--subscribe">
                 <h2 class="follow">Seguinos!</h2>
                 <div class="rrss">
-                    <a href="https://es-la.facebook.com/" class="rrss__icono rrss__btn rrss__btn--facebook" target="_blank"><img src="../icons/facebook-f.svg"
-                            alt="facebook"></a>
-                    <a href="https://www.youtube.com/" class="rrss__icono rrss__btn rrss__btn--youtube" target="_blank"><img src="../icons/youtube.svg"
-                            alt="youtube"></a>
-                    <a href="https://www.twitch.tv/" class="rrss__icono rrss__btn rrss__btn--twitch" target="_blank"><img src="../icons/twitch.svg"
-                            alt="twitch"></a>
-                    <a href="https://twitter.com/?lang=es" class="rrss__icono rrss__btn rrss__btn--twitter" target="_blank"><img src="../icons/twitter.svg"
-                            alt="twitter"></a>
-                    <a href="https://www.instagram.com/" class="rrss__icono rrss__btn rrss__btn--instagram" target="_blank"><img src="../icons/instagram.svg"
-                            alt="instagram"></a>
-                    <a href="https://github.com/" class="rrss__icono rrss__btn rrss__btn--github" target="_blank"><img src="../icons/github.svg"
-                            alt="github"></a>
-                    <a href="https://www.tiktok.com/es/" class="rrss__icono rrss__btn rrss__btn--tiktok" target="_blank"><img src="../icons/tiktok.svg"
-                            alt="tiktok"></a>
-                    <a href="https://web.whatsapp.com/" class="rrss__icono rrss__btn rrss__btn--whatsapp" target="_blank"><img src="../icons/whatsapp.svg"
-                            alt="whatsapp"></a>
+                    <a href="https://es-la.facebook.com/" class="rrss__icono rrss__btn rrss__btn--facebook"
+                        target="_blank"><img src="../icons/facebook-f.svg" alt="facebook"></a>
+                    <a href="https://www.youtube.com/" class="rrss__icono rrss__btn rrss__btn--youtube"
+                        target="_blank"><img src="../icons/youtube.svg" alt="youtube"></a>
+                    <a href="https://www.twitch.tv/" class="rrss__icono rrss__btn rrss__btn--twitch"
+                        target="_blank"><img src="../icons/twitch.svg" alt="twitch"></a>
+                    <a href="https://twitter.com/?lang=es" class="rrss__icono rrss__btn rrss__btn--twitter"
+                        target="_blank"><img src="../icons/twitter.svg" alt="twitter"></a>
+                    <a href="https://www.instagram.com/" class="rrss__icono rrss__btn rrss__btn--instagram"
+                        target="_blank"><img src="../icons/instagram.svg" alt="instagram"></a>
+                    <a href="https://github.com/" class="rrss__icono rrss__btn rrss__btn--github" target="_blank"><img
+                            src="../icons/github.svg" alt="github"></a>
+                    <a href="https://www.tiktok.com/es/" class="rrss__icono rrss__btn rrss__btn--tiktok"
+                        target="_blank"><img src="../icons/tiktok.svg" alt="tiktok"></a>
+                    <a href="https://web.whatsapp.com/" class="rrss__icono rrss__btn rrss__btn--whatsapp"
+                        target="_blank"><img src="../icons/whatsapp.svg" alt="whatsapp"></a>
                 </div>
             </div>
         </div>

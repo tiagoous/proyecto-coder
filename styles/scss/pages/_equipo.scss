@@ -1,3 +1,30 @@
+/* About */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    padding: 0.3em;
+  }
+
+  &__contenedor {
+    margin: 1em;
+    width: 80vw;
+    font-family: $font-bold;
+    font-size: 2rem;
+    background: var(--color-dark-mode-a);
+    transition: 0.2s;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 2px;
+    box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
+
+    p {
+      margin: 0.5em;
+    }
+  }
+}
+
 /* Equipo */
 .equipo {
   &__contenedor {
@@ -7,6 +34,7 @@
     justify-content: center;
     margin: 0.5em;
     padding: 0.5em;
+    gap: 3em;
 
     &--tarjeta {
       position: relative;

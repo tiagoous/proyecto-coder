@@ -15,7 +15,7 @@
     margin: 0.65em 0 1.9em 0;
     border: solid 2px rgb(0, 0, 0);
     border-radius: 2px;
-    box-shadow: 5px 5px rgb(0, 0, 0);
+    box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 
     @include tablet {
         background-image: url(../../multimedia/chart-tablet.png);

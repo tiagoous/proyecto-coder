@@ -14,7 +14,9 @@
     <!-- HEADER -->
 
     <header class="header">
-        <img class="header__img header__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><h1>Ser Crypto</h1><img class="header__img header__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
+        <img class="header__img header__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red">
+        <h1>Ser Crypto</h1><img class="header__img header__img--blue" src="../multimedia/ser-crypto-logo.svg"
+            alt="logo blue">
         <input type="checkbox" id="check">
         <label for="check" class="burger burger--deploy">
             &#8801
@@ -41,61 +43,176 @@
 
         <!-- NFTs // proximamente menu de visualizacion de colecciones en JS -->
 
-        <section>
-            <h3 class="nft__titulo">TOP COLECCIONES</h3>
+        <section class="nft">
+            <h3 class="titulo titulo__nft">TOP COLECCIONES</h3>
             <div class="nft__contenedor">
                 <img class="nft__menu" src="../multimedia/nfts.png" alt="menu colecciones">
-                <img class="nft__seleccionado" src="../multimedia/nfts 2.png" alt="coleccion seleccionada">
-                <h3 class="coleccion__titulo">Bored Ape Yacht Club</h3>
-                <img class="nft__contenido" src="../multimedia/nfts 3.png" alt="nfts de la coleccion">
+                <img class="nft__seleccionado" src="../multimedia/nfts-2.png" alt="coleccion seleccionada">
+                <h3 class="titulo titulo__nft--coleccion">Bored Ape Yacht Club</h3>
+                <img class="nft__contenido" src="../multimedia/nfts-3.png" alt="nfts de la coleccion">
             </div>
         </section>
 
         <!-- NFTs About -->
 
-        <section>
-            <article class="nft__contenedor-informe">
-                <h2 class="titulo titulo__nft--informe nft__informe">Qué son los NFT?</h2>
-                <p class="informe__parrafo-top">Las siglas de NFT significan Non -Fungible Token, un token no
-                    fungible. Los tokens son unidades
-                    de valor que se le asignan a un modelo de negocio, como por ejemplo el de las criptomonedas. Y
-                    es que los NFT tienen una relación estrecha con las criptomonedas, por lo menos
-                    tecnológicamente, aunque son opuestos, ya que un Bitcoin es un bien fungible, y un NFT es un
-                    bien no fungible, pero en esencia, son como las dos caras de una moneda tecnológica.</p>
-                <img class="informe__imagen" src="../multimedia/lemon nft.png" alt="nft de referencia">
-                <p class="informe__parrafo-middle">Para que se entienda bien, podemos pensar en las criptomonedas
-                    como una reserva de valor, algo
-                    parecido al oro. Puedes comprar y vender oro, y cuando el número de compradores aumenta el
-                    precio sube, para bajar cuando este número de compradores disminuye. Es un comportamiento igual
-                    al de las criptomonedas.
+        <section class="nfts__about">
+            <article class="nfts__about--contenedor">
+                <h2 class="titulo titulo__nft">Qué son los NFT?</h2>
+                <div class="nfts__about--contenedor__informe">
+                    <p class="nfts__about--contenedor__informe--parrafo">Las siglas de NFT significan Non -Fungible
+                        Token, un token no
+                        fungible. Los tokens son unidades
+                        de valor que se le asignan a un modelo de negocio, como por ejemplo el de las criptomonedas. Y
+                        es que los NFT tienen una relación estrecha con las criptomonedas, por lo menos
+                        tecnológicamente, aunque son opuestos, ya que un Bitcoin es un bien fungible, y un NFT es un
+                        bien no fungible, pero en esencia, son como las dos caras de una moneda tecnológica.
 
-                    Pero el oro al final es oro, y puedes cambiar una pepita por otra sin
-                    problema. Sin embargo, hay
-                    otros bienes hechos en oro que tienen también un valor, pero son únicos, y ese hecho marca la
-                    diferencia y les da otro tipo de valor. Al igual que ese valor hecho con oro o una obra de arte,
-                    los NFT son activos únicos que no se pueden modificar ni intercambiar por otro que tenga el
-                    mismo valor, ya que no hay dos NFT que sean equivalentes igual que no hay dos cuadros que lo
-                    sean.</p>
-                <p class="informe__parrafo-bottom">Por lo tanto, puedes pensar en un NFT como una gran obra de arte,
-                    como la Gioconda de Da Vinci. Solo hay una y está en una galería de arte concreta. Si la
-                    quieres, solo puedes comprar la original en el caso de que estuviera a la venta. También podrías
-                    hacerte con una copia, pero tendría otro valor, ya que no sería la original. Pues eso
-                    exactamente es lo que hace el NFT, pero de forma digital.
+                        Para que se entienda bien, podemos pensar en las criptomonedas
+                        como una reserva de valor, algo
+                        parecido al oro. Puedes comprar y vender oro, y cuando el número de compradores aumenta el
+                        precio sube, para bajar cuando este número de compradores disminuye. Es un comportamiento igual
+                        al de las criptomonedas.
 
-                    Para entenderlo mejor, un NFT sería como una obra de arte única, por ejemplo, El David de Miguel
-                    Ángel, solo hay uno y está en la Galería de la Academia de Florencia; si alguien quisiese tener
-                    ese David en concreto, debería comprarlo (si estuviese a la venta) o hacerse con una copia, en
-                    cuyo caso, ya no estaríamos hablando del original, que es lo que dota de valor a la escultura.
-                </p>
+                        Pero el oro al final es oro, y puedes cambiar una pepita por otra sin
+                        problema. Sin embargo, hay
+                        otros bienes hechos en oro que tienen también un valor, pero son únicos, y ese hecho marca la
+                        diferencia y les da otro tipo de valor. Al igual que ese valor hecho con oro o una obra de arte,
+                        los NFT son activos únicos que no se pueden modificar ni intercambiar por otro que tenga el
+                        mismo valor, ya que no hay dos NFT que sean equivalentes igual que no hay dos cuadros que lo
+                        sean.
+
+                        Por lo tanto, puedes pensar en un NFT como una gran obra de arte,
+                        como la Gioconda de Da Vinci. Solo hay una y está en una galería de arte concreta. Si la
+                        quieres, solo puedes comprar la original en el caso de que estuviera a la venta. También podrías
+                        hacerte con una copia, pero tendría otro valor, ya que no sería la original. Pues eso
+                        exactamente es lo que hace el NFT, pero de forma digital.
+
+                        Para entenderlo mejor, un NFT sería como una obra de arte única, por ejemplo, El David de Miguel
+                        Ángel, solo hay uno y está en la Galería de la Academia de Florencia; si alguien quisiese tener
+                        ese David en concreto, debería comprarlo (si estuviese a la venta) o hacerse con una copia, en
+                        cuyo caso, ya no estaríamos hablando del original, que es lo que dota de valor a la escultura.
+                    </p>
+                </div>
             </article>
+            <div class="nfts__about--card">
+                <img class="nfts__about--card__imagen" src="../multimedia/nft-simpsons.png" alt="nft de referencia">
+            </div>
+            <div class="nfts__about--card">
+                <img class="nfts__about--card__imagen" src="../multimedia/nft-yaguarete.png" alt="nft de referencia">
+            </div>
+            <div class="nfts__about--card">
+                <img class="nfts__about--card__imagen" src="../multimedia/nft-mizuki.png" alt="nft de referencia">
+            </div>
+            <div class="nfts__about--card">
+                <img class="nfts__about--card__imagen" src="../multimedia/lemon-nft.png" alt="nft de referencia">
+            </div>           
         </section>
+
+        <section class="crypto__slider">
+            <div class="crypto__slider--slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <a href="./coins.html#bitcoin" target="_blank">
+                            <img src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#ethereum" target="_blank">
+                            <img src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#tether" target="_blank">
+                            <img src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#ravencoin" target="_blank">
+                            <img src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#polkadot" target="_blank">
+                            <img src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#bnb" target="_blank">
+                            <img src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#bitcoin" target="_blank">
+                            <img src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#ethereum" target="_blank">
+                            <img src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#tether" target="_blank">
+                            <img src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#ravencoin" target="_blank">
+                            <img src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#polkadot" target="_blank">
+                            <img src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#bnb" target="_blank">
+                            <img src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#bitcoin" target="_blank">
+                            <img src="../multimedia/bitcoin-btc-logo.png" alt="bitcoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#ethereum" target="_blank">
+                            <img src="../multimedia/ethereum-eth-logo.png" alt="ethereum">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#tether" target="_blank">
+                            <img src="../multimedia/tether-usdt-logo.png" alt="tether">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#ravencoin" target="_blank">
+                            <img src="../multimedia/ravencoin-rvn-logo.png" alt="ravencoin">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#polkadot" target="_blank">
+                            <img src="../multimedia/polkadot-new-dot-logo.png" alt="polkadot">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="./coins.html#bnb" target="_blank">
+                            <img src="../multimedia/bnb-bnb-logo.png" alt="bnb">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
 
     <footer class="footer">
         <div class="footer__arriba">
-            <img class="footer__img footer__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><img class="footer__img footer__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
+            <img class="footer__img footer__img--red" src="../multimedia/ser-crypto-logo.svg" alt="logo red"><img
+                class="footer__img footer__img--blue" src="../multimedia/ser-crypto-logo.svg" alt="logo blue">
             <div class="footer__arriba--pages">
                 <ul class="pages">
                     <li><a data-text="Home" href="../index.html">HOME</a></li>
@@ -109,22 +226,22 @@
             <div class="footer__arriba--subscribe">
                 <h2 class="follow">Seguinos!</h2>
                 <div class="rrss">
-                    <a href="https://es-la.facebook.com/" class="rrss__icono rrss__btn rrss__btn--facebook" target="_blank"><img src="../icons/facebook-f.svg"
-                            alt="facebook"></a>
-                    <a href="https://www.youtube.com/" class="rrss__icono rrss__btn rrss__btn--youtube" target="_blank"><img src="../icons/youtube.svg"
-                            alt="youtube"></a>
-                    <a href="https://www.twitch.tv/" class="rrss__icono rrss__btn rrss__btn--twitch" target="_blank"><img src="../icons/twitch.svg"
-                            alt="twitch"></a>
-                    <a href="https://twitter.com/?lang=es" class="rrss__icono rrss__btn rrss__btn--twitter" target="_blank"><img src="../icons/twitter.svg"
-                            alt="twitter"></a>
-                    <a href="https://www.instagram.com/" class="rrss__icono rrss__btn rrss__btn--instagram" target="_blank"><img src="../icons/instagram.svg"
-                            alt="instagram"></a>
-                    <a href="https://github.com/" class="rrss__icono rrss__btn rrss__btn--github" target="_blank"><img src="../icons/github.svg"
-                            alt="github"></a>
-                    <a href="https://www.tiktok.com/es/" class="rrss__icono rrss__btn rrss__btn--tiktok" target="_blank"><img src="../icons/tiktok.svg"
-                            alt="tiktok"></a>
-                    <a href="https://web.whatsapp.com/" class="rrss__icono rrss__btn rrss__btn--whatsapp" target="_blank"><img src="../icons/whatsapp.svg"
-                            alt="whatsapp"></a>
+                    <a href="https://es-la.facebook.com/" class="rrss__icono rrss__btn rrss__btn--facebook"
+                        target="_blank"><img src="../icons/facebook-f.svg" alt="facebook"></a>
+                    <a href="https://www.youtube.com/" class="rrss__icono rrss__btn rrss__btn--youtube"
+                        target="_blank"><img src="../icons/youtube.svg" alt="youtube"></a>
+                    <a href="https://www.twitch.tv/" class="rrss__icono rrss__btn rrss__btn--twitch"
+                        target="_blank"><img src="../icons/twitch.svg" alt="twitch"></a>
+                    <a href="https://twitter.com/?lang=es" class="rrss__icono rrss__btn rrss__btn--twitter"
+                        target="_blank"><img src="../icons/twitter.svg" alt="twitter"></a>
+                    <a href="https://www.instagram.com/" class="rrss__icono rrss__btn rrss__btn--instagram"
+                        target="_blank"><img src="../icons/instagram.svg" alt="instagram"></a>
+                    <a href="https://github.com/" class="rrss__icono rrss__btn rrss__btn--github" target="_blank"><img
+                            src="../icons/github.svg" alt="github"></a>
+                    <a href="https://www.tiktok.com/es/" class="rrss__icono rrss__btn rrss__btn--tiktok"
+                        target="_blank"><img src="../icons/tiktok.svg" alt="tiktok"></a>
+                    <a href="https://web.whatsapp.com/" class="rrss__icono rrss__btn rrss__btn--whatsapp"
+                        target="_blank"><img src="../icons/whatsapp.svg" alt="whatsapp"></a>
                 </div>
             </div>
         </div>
