@@ -2,20 +2,21 @@
   
 .btn {
     background: var(--color-primario);
-    padding: 0.75em 1.1em;
+    padding: 0.2em;
+    margin: 0.5em auto;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 2px;
     box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
     font-family: $font-secundaria;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: rgb(0, 0, 0);
-    letter-spacing: 3px;
+    letter-spacing: 0.2rem;
     transition: 0.2s;
 
-    @include tv {
+    @include tv { 
       border: 5px solid rgb(0, 0, 0);
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   
     &:hover {
@@ -25,6 +26,7 @@
     }
   
     a {
+      padding: 0.2em;
       color: rgb(0, 0, 0);
       text-decoration: none;
     }

@@ -277,26 +277,8 @@
       }
 
       &--btn {
-        margin: 1.25em 3.2em;
-
-        @include mobile {
-          margin: 1.25em;
-        }
-
-        @include tablet {
-          letter-spacing: 0.1rem;
-          margin: 0.5em;
-        }
-
-        @include notebook {
-          letter-spacing: 0.12rem;
-          margin: 1.5em 0.5em;
-        }
-
-        @include tv {
-          letter-spacing: 0.2rem;
-          margin: 1.5em;
-        }
+        padding: 0.2em;
+        margin: 1.25em auto;
       }
     }
 

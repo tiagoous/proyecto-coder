@@ -549,21 +549,22 @@ body {
 /* ...........---Botones Styles---........... */
 .btn, .footer__arriba--subscribe .rrss__btn {
   background: var(--color-primario);
-  padding: 0.75em 1.1em;
+  padding: 0.2em;
+  margin: 0.5em auto;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 2px;
   box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
   font-family: "Tusker Grotesk Light";
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: rgb(0, 0, 0);
-  letter-spacing: 3px;
+  letter-spacing: 0.2rem;
   transition: 0.2s;
 }
 @media (width >= 1400px) {
   .btn, .footer__arriba--subscribe .rrss__btn {
     border: 5px solid rgb(0, 0, 0);
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 .btn:hover, .footer__arriba--subscribe .rrss__btn:hover {
@@ -572,6 +573,7 @@ body {
   cursor: pointer;
 }
 .btn a, .footer__arriba--subscribe .rrss__btn a {
+  padding: 0.2em;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
@@ -1207,30 +1209,8 @@ body {
   }
 }
 .noticias__articulos--body--btn {
-  margin: 1.25em 3.2em;
-}
-@media (width < 480px) {
-  .noticias__articulos--body--btn {
-    margin: 1.25em;
-  }
-}
-@media (width >= 480px) and (width < 768px) {
-  .noticias__articulos--body--btn {
-    letter-spacing: 0.1rem;
-    margin: 0.5em;
-  }
-}
-@media (width >= 768px) and (width < 1024px) {
-  .noticias__articulos--body--btn {
-    letter-spacing: 0.12rem;
-    margin: 1.5em 0.5em;
-  }
-}
-@media (width >= 1400px) {
-  .noticias__articulos--body--btn {
-    letter-spacing: 0.2rem;
-    margin: 1.5em;
-  }
+  padding: 0.2em;
+  margin: 1.25em auto;
 }
 .noticias__articulos__principal--autor {
   padding: 1.25em;
@@ -1399,7 +1379,8 @@ body {
 }
 .cryptos__contenedor a .icono-crypto {
   align-self: center;
-  width: 5em;
+  width: 90%;
+  padding: 0.1em;
 }
 .cryptos__contenedor a .texto-crypto {
   text-align: center;
@@ -1885,25 +1866,10 @@ body {
   }
 }
 .formulario__contactanos {
-  padding: 0 3.2em;
+  padding: 2em 3.2em;
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-@media (width < 480px) {
-  .formulario__contactanos {
-    padding: 0;
-  }
-}
-@media (width >= 480px) and (width < 768px) {
-  .formulario__contactanos {
-    padding: 0.5em;
-  }
-}
-@media (width >= 768px) and (width < 1024px) {
-  .formulario__contactanos {
-    padding: 1em;
-  }
 }
 .formulario__contactanos--entrada {
   width: 100%;
@@ -1992,7 +1958,7 @@ body {
   }
 }
 .formulario__contactanos--btn {
-  margin: 1.5em 0 0.32em 0;
+  margin: 1.2em auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
