@@ -1404,27 +1404,41 @@ body {
 }
 @media (width < 480px) {
   .cryptos__about--cryptos {
-    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 }
 @media (width >= 480px) and (width < 768px) {
   .cryptos__about--cryptos {
-    gap: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
   }
 }
 @media (width >= 768px) and (width < 1024px) {
   .cryptos__about--cryptos {
-    gap: 3em;
+    gap: 1.2em;
   }
 }
 .cryptos__about--cryptos__contenedor {
   width: 40vw;
   height: fit-content;
-  margin: 0 3em;
+  margin: 1.5em;
   background: var(--color-dark-mode-a);
   border-radius: 2px;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
+}
+@media (width < 480px) {
+  .cryptos__about--cryptos__contenedor {
+    width: 80vw;
+  }
+}
+@media (width >= 480px) and (width < 768px) {
+  .cryptos__about--cryptos__contenedor {
+    width: 90vw;
+  }
 }
 @media (width >= 1400px) {
   .cryptos__about--cryptos__contenedor {
@@ -1671,6 +1685,7 @@ body {
 /* About */
 .about {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -1679,9 +1694,10 @@ body {
 }
 .about__contenedor {
   margin: 1em;
-  width: 80vw;
+  width: 50vw;
   font-family: "Canter Bold";
   font-size: 2rem;
+  font-weight: 600;
   background: var(--color-dark-mode-a);
   transition: 0.2s;
   border: 2px solid rgb(0, 0, 0);

@@ -1,6 +1,7 @@
 /* About */
 .about {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -10,9 +11,10 @@
 
   &__contenedor {
     margin: 1em;
-    width: 80vw;
+    width: 50vw;
     font-family: $font-bold;
     font-size: 2rem;
+    font-weight: 600;
     background: var(--color-dark-mode-a);
     transition: 0.2s;
     border: 2px solid rgb(0, 0, 0);

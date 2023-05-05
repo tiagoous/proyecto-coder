@@ -36,7 +36,7 @@
         <img class="header__img header__img--red" src="./multimedia/ser-crypto-logo.svg" alt="logo red">
         <h1>Ser Crypto</h1><img class="header__img header__img--blue" src="./multimedia/ser-crypto-logo.svg"
             alt="logo blue">
-        <input type="checkbox" id="check">
+        <input name="burger" type="checkbox" id="check">
         <label for="check" class="burger burger--deploy">
             &#8801
         </label>
@@ -313,18 +313,18 @@
             <h2 class="titulo titulo__formulario">Dejanos tu mensaje!</h2>
             <form class="formulario__contactanos" action="">
                 <div class="formulario__contactanos--entrada">
-                    <input class="input" type="text" id="nombre" required>
+                    <input name="nombre" class="input" type="text" id="nombre" required>
                     <label for="nombre" class="etiqueta">Nombre</label>
                 </div>
                 <div class="formulario__contactanos--entrada">
-                    <input class="input" type="email" id="email" required>
+                    <input name="email" class="input" type="email" id="email" required>
                     <label for="email" class="etiqueta">Email</label>
                 </div>
                 <div class="formulario__contactanos--entrada">
                     <textarea class="input mensaje" id="mensaje" cols="30" rows="10" required></textarea>
                     <label for="mensaje" class="etiqueta">Tu Mensaje</label>
                 </div>
-                <input class="formulario__contactanos--btn btn" type="submit" value="Enviar">
+                <input name="enviar" class="formulario__contactanos--btn btn" type="submit" value="Enviar">
             </form>
         </section>
     </main>
