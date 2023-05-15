@@ -14,11 +14,6 @@
     letter-spacing: 0.2rem;
     transition: 0.2s;
 
-    @include tv { 
-      border: 5px solid rgb(0, 0, 0);
-      font-size: 2.5rem;
-    }
-  
     &:hover {
       transform: translate(3px);
       box-shadow: 3px 3px rgb(0, 0, 0);

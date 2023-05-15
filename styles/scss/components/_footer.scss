@@ -271,16 +271,6 @@
           height: 1em;
           width: 1em;
           margin: 0.32em;
-
-          @include mobile {
-            width: 1.5em;
-            height: 1.5em;
-          }
-
-          @include tv {
-            width: 2em;
-            height: 2em;
-          }
         }
       }
     }

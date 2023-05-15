@@ -585,12 +585,6 @@ body {
   letter-spacing: 0.2rem;
   transition: 0.2s;
 }
-@media (width >= 1400px) {
-  .btn, .footer__arriba--subscribe .rrss__btn {
-    border: 5px solid rgb(0, 0, 0);
-    font-size: 2.5rem;
-  }
-}
 .btn:hover, .footer__arriba--subscribe .rrss__btn:hover {
   transform: translate(3px);
   box-shadow: 3px 3px rgb(0, 0, 0);
@@ -862,18 +856,6 @@ body {
   height: 1em;
   width: 1em;
   margin: 0.32em;
-}
-@media (width < 480px) {
-  .footer__arriba--subscribe .rrss__icono img {
-    width: 1.5em;
-    height: 1.5em;
-  }
-}
-@media (width >= 1400px) {
-  .footer__arriba--subscribe .rrss__icono img {
-    width: 2em;
-    height: 2em;
-  }
 }
 .footer__abajo {
   color: rgb(0, 0, 0);
