@@ -10,29 +10,32 @@
   }
 
   &__img {
+    display: flex;
+    justify-self: start;
+    align-items: center;
     height: 4em;
     margin: 4em 0.5em;
 
     &--red {
+      position: relative;
       animation: glitch-svg-red 2.5s infinite;
     }
 
     &--blue {
       position: absolute;
-      animation: glitch-svg-blue 2.5s infinite;
+      animation: glitch-svg-blue 2.5s 0.5s infinite;
     }
 
     @include mobile {
-      display: flex;
       align-items: center;
       justify-content: center;
       height: 3.5em;
       transition: 0.8s;
-      margin: 0 2.3em;
+      margin: 0 5em;
     }
 
     @include tablet {
-      margin: 0.5em;
+      margin: 0 4em;
       height: 4em;
       transition: 0.8s;
     }
@@ -47,26 +50,23 @@
 
   &__arriba {
     width: 100%;
-    max-width: 85vw;
-    margin: auto;
+    max-width: 90vw;
+    margin: 1em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 2.8em 0;
 
     @include mobile {
-      width: 90%;
       grid-template-columns: 1fr;
       padding: 1.5em 0;
     }
 
     @include tablet {
-      width: 90%;
       grid-template-columns: repeat(2, 1fr);
       padding: 1em 0;
     }
 
     @include tv {
-      width: 100%;
       grid-template-columns: repeat(5, 1fr);
       margin: auto;
       padding: 0;
@@ -75,7 +75,7 @@
     &--pages {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-self: center;
 
       @include tablet {
         margin: 2em 0;
@@ -143,8 +143,12 @@
       .rrss {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
 
         @include mobile {
+          justify-content: center;
+          align-items: center;
+          display: flex;
           flex-wrap: wrap;
         }
 
@@ -153,8 +157,10 @@
         }
 
         @include tv {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
         }
 
         a {
@@ -165,6 +171,7 @@
 
         &__btn {
           @extend .btn;
+
           display: flex;
           align-items: center;
           justify-content: center;

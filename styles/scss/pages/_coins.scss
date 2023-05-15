@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1em;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   gap: 3.75em;
 
@@ -25,14 +25,13 @@
     width: 7em;
     height: 12em;
     background: var(--color-dark-mode-a);
-    border-radius: 2px;
     transition: 0.2s;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
+
+    @extend .shadow;
 
     @include tv {
-      width: 9em;
-      height: 15em;
+      width: 10%;
+      height: 18%;
     }
 
     &:hover {
@@ -43,9 +42,10 @@
 
     &--color {
       height: 1.9em;
-      border-bottom: solid 2px rgb(0, 0, 0);
+      border-bottom: solid 0.3em rgb(0, 0, 0);
 
       @include tv {
+        height: 5vh;
         border-bottom: solid 4px rgb(0, 0, 0);
       }
 
@@ -132,8 +132,8 @@
     margin: 1.5em;
     background: var(--color-dark-mode-a);
     border-radius: 2px;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
+
+    @extend .shadow;
 
     @include mobile {
       width: 80vw;
@@ -141,11 +141,6 @@
 
     @include tablet {
       width: 90vw;
-    }
-
-    @include tv {
-      border: 4px solid rgb(0, 0, 0);
-      box-shadow: 4px 4px rgb(201, 26, 108), 8px 8px rgb(0, 0, 0), 12px 12px rgb(44, 252, 141), 16px 16px rgb(0, 0, 0), 20px 20px rgb(71, 73, 183), 24px 24px rgb(0, 0, 0);
     }
 
     &--color {

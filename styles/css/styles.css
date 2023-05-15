@@ -84,12 +84,40 @@
   );
   /* ...........---MODO OSCURO---........... */
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: rgb(140, 255, 218);
+    --color-secundario: rgb(132, 71, 255);
+    --color-terceario: rgb(252, 215, 44);
+    --color-cuaternario: rgb(255, 54, 171);
+    --color-dark-mode-a: rgb(136, 136, 136);
+    --color-dark-mode-b: rgb(255, 255, 255);
+    --gradient: linear-gradient(
+      60deg,
+      rgb(47, 183, 179),
+      rgb(42, 100, 194),
+      rgb(194, 39, 78),
+      rgb(191, 22, 22),
+      rgb(192, 163, 16),
+      rgb(187, 193, 8),
+      rgb(74, 193, 15),
+      rgb(10, 186, 77)
+    );
+  }
+}
 
 /* .........---BACKGROUND---......... */
 body {
   background: var(--gradient);
   background-size: 400%;
   animation: background-moving 25s infinite alternate;
+}
+
+/* .........---SHADOWS---......... */
+.shadow, .contacto .formulario, .contacto .about__formulario, .who .about__contenedor, .nfts__about--contenedor__informe, .nft__contenedor, .cryptos__about--cryptos__contenedor, .cryptos__contenedor, .desarrollo__noticias--articulo, .noticias__contenedor--card, .grafico__background, .btn, .footer__arriba--subscribe .rrss__btn {
+  border-radius: 2px;
+  border: 0.1em solid rgb(0, 0, 0);
+  box-shadow: 0.1em 0.1em rgb(201, 26, 108), 0.2em 0.2em rgb(0, 0, 0), 0.3em 0.3em rgb(44, 252, 141), 0.4em 0.4em rgb(0, 0, 0), 0.5em 0.5em rgb(71, 73, 183), 0.6em 0.6em rgb(0, 0, 0);
 }
 
 /* .........---TEXTOS---......... */
@@ -108,7 +136,6 @@ body {
   .titulo {
     padding-top: 1.9em;
     font-size: 2.8rem;
-    text-shadow: 2px 2px rgb(0, 0, 0);
   }
 }
 @media (width >= 480px) and (width < 768px) {
@@ -132,7 +159,7 @@ body {
 }
 .titulo__desarrollo {
   font-size: 3rem;
-  margin: 0.6em 0 0 0;
+  margin-top: 0.6em;
   padding: 0;
 }
 .titulo__nft--coleccion {
@@ -228,7 +255,7 @@ body {
 }
 .header__img--blue {
   position: absolute;
-  animation: glitch-svg-blue 2.5s infinite;
+  animation: glitch-svg-blue 2.5s 0.5s infinite;
 }
 @media (width < 480px) {
   .header__img {
@@ -551,9 +578,6 @@ body {
   background: var(--color-primario);
   padding: 0.2em;
   margin: 0.5em auto;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
   font-family: "Tusker Grotesk Light";
   text-transform: uppercase;
   font-size: 2rem;
@@ -610,29 +634,32 @@ body {
   }
 }
 .footer__img {
+  display: flex;
+  justify-self: start;
+  align-items: center;
   height: 4em;
   margin: 4em 0.5em;
 }
 .footer__img--red {
+  position: relative;
   animation: glitch-svg-red 2.5s infinite;
 }
 .footer__img--blue {
   position: absolute;
-  animation: glitch-svg-blue 2.5s infinite;
+  animation: glitch-svg-blue 2.5s 0.5s infinite;
 }
 @media (width < 480px) {
   .footer__img {
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 3.5em;
     transition: 0.8s;
-    margin: 0 2.3em;
+    margin: 0 5em;
   }
 }
 @media (width >= 480px) and (width < 768px) {
   .footer__img {
-    margin: 0.5em;
+    margin: 0 4em;
     height: 4em;
     transition: 0.8s;
   }
@@ -647,29 +674,26 @@ body {
 }
 .footer__arriba {
   width: 100%;
-  max-width: 85vw;
-  margin: auto;
+  max-width: 90vw;
+  margin: 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 2.8em 0;
 }
 @media (width < 480px) {
   .footer__arriba {
-    width: 90%;
     grid-template-columns: 1fr;
     padding: 1.5em 0;
   }
 }
 @media (width >= 480px) and (width < 768px) {
   .footer__arriba {
-    width: 90%;
     grid-template-columns: repeat(2, 1fr);
     padding: 1em 0;
   }
 }
 @media (width >= 1400px) {
   .footer__arriba {
-    width: 100%;
     grid-template-columns: repeat(5, 1fr);
     margin: auto;
     padding: 0;
@@ -678,7 +702,7 @@ body {
 .footer__arriba--pages {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
 }
 @media (width >= 480px) and (width < 768px) {
   .footer__arriba--pages {
@@ -748,9 +772,13 @@ body {
 .footer__arriba--subscribe .rrss {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
 }
 @media (width < 480px) {
   .footer__arriba--subscribe .rrss {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     flex-wrap: wrap;
   }
 }
@@ -761,8 +789,10 @@ body {
 }
 @media (width >= 1400px) {
   .footer__arriba--subscribe .rrss {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 @media (width >= 1400px) {
@@ -887,9 +917,6 @@ body {
   background-size: cover;
   background-position: center;
   margin: 0.65em 0 1.9em 0;
-  border: solid 2px rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width >= 480px) and (width < 768px) {
   .grafico__background {
@@ -960,9 +987,6 @@ body {
   margin: 0 1.25em;
   background: var(--color-dark-mode-a);
   transition: 0.2s;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width < 480px) {
   .noticias__contenedor--card {
@@ -1284,9 +1308,6 @@ body {
   font-size: 2rem;
   background: var(--color-dark-mode-a);
   transition: 0.2s;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 .desarrollo__noticias--articulo p {
   margin: 1em;
@@ -1303,7 +1324,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1em;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   gap: 3.75em;
 }
@@ -1326,15 +1347,12 @@ body {
   width: 7em;
   height: 12em;
   background: var(--color-dark-mode-a);
-  border-radius: 2px;
   transition: 0.2s;
-  border: 2px solid rgb(0, 0, 0);
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width >= 1400px) {
   .cryptos__contenedor {
-    width: 9em;
-    height: 15em;
+    width: 10%;
+    height: 18%;
   }
 }
 .cryptos__contenedor:hover {
@@ -1344,10 +1362,11 @@ body {
 }
 .cryptos__contenedor--color {
   height: 1.9em;
-  border-bottom: solid 2px rgb(0, 0, 0);
+  border-bottom: solid 0.3em rgb(0, 0, 0);
 }
 @media (width >= 1400px) {
   .cryptos__contenedor--color {
+    height: 5vh;
     border-bottom: solid 4px rgb(0, 0, 0);
   }
 }
@@ -1427,8 +1446,6 @@ body {
   margin: 1.5em;
   background: var(--color-dark-mode-a);
   border-radius: 2px;
-  border: 2px solid rgb(0, 0, 0);
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width < 480px) {
   .cryptos__about--cryptos__contenedor {
@@ -1438,12 +1455,6 @@ body {
 @media (width >= 480px) and (width < 768px) {
   .cryptos__about--cryptos__contenedor {
     width: 90vw;
-  }
-}
-@media (width >= 1400px) {
-  .cryptos__about--cryptos__contenedor {
-    border: 4px solid rgb(0, 0, 0);
-    box-shadow: 4px 4px rgb(201, 26, 108), 8px 8px rgb(0, 0, 0), 12px 12px rgb(44, 252, 141), 16px 16px rgb(0, 0, 0), 20px 20px rgb(71, 73, 183), 24px 24px rgb(0, 0, 0);
   }
 }
 .cryptos__about--cryptos__contenedor--color {
@@ -1564,9 +1575,6 @@ body {
   background: rgb(255, 255, 255);
   background-size: cover;
   background-position: center;
-  border: solid 2px rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 @media (width < 480px) {
   .nft__contenedor {
@@ -1650,9 +1658,6 @@ body {
   align-items: center;
   margin: 2em;
   background: rgb(255, 255, 255);
-  border: solid 2px rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
 .nfts__about--contenedor__informe--parrafo {
   font-family: "Canter Bold";
@@ -1683,29 +1688,72 @@ body {
 }
 
 /* About */
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.who {
+  width: 90vw;
+  margin: auto;
 }
-.about h2 {
+@media (width < 480px) {
+  .who {
+    width: 100vw;
+  }
+}
+.who h2 {
   padding: 0.3em;
 }
-.about__contenedor {
+.who .about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2em;
+}
+.who .about__contenedor {
   margin: 1em;
-  width: 50vw;
+  width: 70vw;
   font-family: "Canter Bold";
   font-size: 2rem;
   font-weight: 600;
   background: var(--color-dark-mode-a);
   transition: 0.2s;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
 }
-.about__contenedor p {
+@media (width < 480px) {
+  .who .about__contenedor {
+    width: 80vw;
+  }
+}
+@media (width >= 480px) and (width < 768px) {
+  .who .about__contenedor {
+    width: 80vw;
+  }
+}
+@media (width >= 1400px) {
+  .who .about__contenedor {
+    width: 60vw;
+  }
+}
+.who .about__contenedor p {
   margin: 0.5em;
+}
+.who .about .polaroid {
+  width: 19em;
+  height: 22em;
+  margin: 1em;
+  box-shadow: 4px 4px rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 1em 1em 4em 1em;
+}
+.who .about .polaroid:nth-of-type(even) {
+  transform: rotate(5deg);
+}
+.who .about .polaroid:nth-of-type(odd) {
+  transform: rotate(-5deg);
+}
+.who .about .polaroid img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 2px rgb(0, 0, 0);
+  object-fit: cover;
 }
 
 /* Equipo */
@@ -1717,6 +1765,11 @@ body {
   margin: 0.5em;
   padding: 0.5em;
   gap: 3em;
+}
+@media (width >= 1400px) {
+  .equipo__contenedor {
+    justify-content: space-evenly;
+  }
 }
 .equipo__contenedor--tarjeta {
   position: relative;
@@ -1842,58 +1895,55 @@ body {
 }
 
 /* ------...Contactanos...------ */
-.formulario {
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contacto .about__formulario {
+  gap: 3em;
+}
+.contacto .about__formulario p {
+  font-family: "Canter Bold";
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.contacto .formulario, .contacto .about__formulario {
   background: var(--color-dark-mode-b);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 40vw;
-  padding: 0 1.25em 1.25em;
+  padding: 1.25em;
   overflow: hidden;
   margin: 3.2em auto;
-  border: solid 2px rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
   justify-content: center;
 }
 @media (width < 480px) {
-  .formulario {
+  .contacto .formulario, .contacto .about__formulario {
     width: 85vw;
     margin: 1.5em;
   }
 }
 @media (width >= 480px) and (width < 768px) {
-  .formulario {
+  .contacto .formulario, .contacto .about__formulario {
     width: 80vw;
     margin: 1.5em auto;
   }
 }
-@media (width >= 768px) and (width < 1024px) {
-  .formulario {
-    width: 70vw;
-    margin: 1.5em auto;
-  }
-}
-@media (width >= 1400px) {
-  .formulario {
-    width: 70vw;
-    margin: 4em auto;
-  }
-}
-.formulario__contactanos {
-  padding: 2em 3.2em;
+.contacto .formulario__contactanos {
+  padding: 0 3.2em;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.formulario__contactanos--entrada {
+.contacto .formulario__contactanos--entrada {
   width: 100%;
   height: 3.5em;
   margin: 1.9em 0;
   position: relative;
 }
-.formulario__contactanos--entrada .input {
+.contacto .formulario__contactanos--entrada .input {
   font-family: "Canter Bold";
   width: 100%;
   height: 100%;
@@ -1907,7 +1957,7 @@ body {
   font-size: 2rem;
   line-height: 0.5rem;
 }
-.formulario__contactanos--entrada .input:focus ~ .etiqueta {
+.contacto .formulario__contactanos--entrada .input:focus ~ .etiqueta {
   top: -0.32em;
   left: 0.32em;
   background: transparent;
@@ -1915,7 +1965,7 @@ body {
   padding: 0.32em;
 }
 @media (width < 480px) {
-  .formulario__contactanos--entrada .input:focus ~ .etiqueta {
+  .contacto .formulario__contactanos--entrada .input:focus ~ .etiqueta {
     top: -0.16em;
     left: 0.16em;
     background: transparent;
@@ -1923,7 +1973,7 @@ body {
     padding: 0.16em;
   }
 }
-.formulario__contactanos--entrada .input:valid ~ .etiqueta {
+.contacto .formulario__contactanos--entrada .input:valid ~ .etiqueta {
   top: -0.32em;
   left: 0.32em;
   background: transparent;
@@ -1931,7 +1981,7 @@ body {
   padding: 0.32em;
 }
 @media (width < 480px) {
-  .formulario__contactanos--entrada .input:valid ~ .etiqueta {
+  .contacto .formulario__contactanos--entrada .input:valid ~ .etiqueta {
     top: -0.16em;
     left: 0.16em;
     background: transparent;
@@ -1940,19 +1990,19 @@ body {
   }
 }
 @media (width < 480px) {
-  .formulario__contactanos--entrada .input {
+  .contacto .formulario__contactanos--entrada .input {
     margin-right: 0.32em;
   }
 }
-.formulario__contactanos--entrada .mensaje {
+.contacto .formulario__contactanos--entrada .mensaje {
   resize: none;
 }
 @media (width < 480px) {
-  .formulario__contactanos--entrada .mensaje {
+  .contacto .formulario__contactanos--entrada .mensaje {
     margin-right: 0.32em;
   }
 }
-.formulario__contactanos--entrada .etiqueta {
+.contacto .formulario__contactanos--entrada .etiqueta {
   position: absolute;
   font-family: "Canter Bold";
   font-weight: 800;
@@ -1966,14 +2016,14 @@ body {
   transition: 0.4s;
 }
 @media (width < 480px) {
-  .formulario__contactanos--entrada .etiqueta {
+  .contacto .formulario__contactanos--entrada .etiqueta {
     top: 60%;
     left: 0.32em;
     transform: translateY(-18%);
     font-size: 1.5rem;
   }
 }
-.formulario__contactanos--btn {
+.contacto .formulario__contactanos--btn {
   margin: 1.2em auto;
 }
 

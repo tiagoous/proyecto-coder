@@ -1,5 +1,20 @@
 /* ------...Contactanos...------ */
 
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+
+.about__formulario {
+  @extend .formulario;
+  gap: 3em;
+
+  p {
+    font-family: $font-bold;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+}
+
 .formulario {
   background: var(--color-dark-mode-b);
   display: flex;
@@ -7,13 +22,12 @@
   align-items: center;
   text-align: center;
   width: 40vw;
-  padding: 0 1.25em 1.25em;
+  padding: 1.25em;
   overflow: hidden;
   margin: 3.2em auto;
-  border: solid 2px rgb(0, 0, 0);
-  border-radius: 2px;
-  box-shadow: 2px 2px rgb(201, 26, 108), 4px 4px rgb(0, 0, 0), 6px 6px rgb(44, 252, 141), 8px 8px rgb(0, 0, 0), 12px 12px rgb(71, 73, 183), 14px 14px rgb(0, 0, 0);
   justify-content: center;
+
+  @extend .shadow;
 
   @include mobile {
     width: 85vw;
@@ -25,19 +39,8 @@
     margin: 1.5em auto;
   }
 
-  @include notebook {
-    width: 70vw;
-    margin: 1.5em auto;
-  }
-
-  @include tv {
-    width: 70vw;
-    margin: 4em auto;
-  }
-
-
   &__contactanos {
-    padding: 2em 3.2em;
+    padding: 0 3.2em;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -133,4 +136,5 @@
         margin: 1.2em auto;
     }
   }
+}
 }

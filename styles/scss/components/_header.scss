@@ -38,7 +38,7 @@
 
     &--blue {
       position: absolute;
-      animation: glitch-svg-blue 2.5s infinite;
+      animation: glitch-svg-blue 2.5s 0.5s infinite;
     }
 
     @include mobile {

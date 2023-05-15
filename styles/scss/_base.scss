@@ -45,12 +45,6 @@ $font-bold: "Canter Bold";
   }
 }
 
-@mixin desktop {
-  @media (width >= 1024px) and (width < 1400px) {
-    @content;
-  }
-}
-
 @mixin tv {
   @media (width >= 1400px) {
     @content;
@@ -139,27 +133,29 @@ $font-bold: "Canter Bold";
 
   /* ...........---MODO OSCURO---........... */
 
-  //   DESACTIVADO HASTA NUEVO AVISO!
 
-  //   @media (prefers-color-scheme: dark) {
-  //     & {
-  //       --color-primario: rgb(140, 255, 218);
-  //       --color-secundario: rgb(132, 71, 255);
-  //       --color-terceario: rgb(252, 215, 44);
-  //       --color-cuaternario: rgb(255, 54, 171);
-  //       --color-dark-mode-a: rgb(136, 136, 136);
-  //       --color-dark-mode-b: rgb(255, 255, 255);
+    @media (prefers-color-scheme: dark) {
+      & {
+        --color-primario: rgb(140, 255, 218);
+        --color-secundario: rgb(132, 71, 255);
+        --color-terceario: rgb(252, 215, 44);
+        --color-cuaternario: rgb(255, 54, 171);
+        --color-dark-mode-a: rgb(136, 136, 136);
+        --color-dark-mode-b: rgb(255, 255, 255);
 
-  //       --gradient: linear-gradient(
-  //         60deg,
-  //         rgb(105, 19, 18),
-  //         rgb(93, 9, 51),
-  //         rgb(41, 25, 56),
-  //         rgb(4, 45, 58),
-  //         rgb(18, 64, 60)
-  //       );
-  //     }
-  //   }
+        --gradient: linear-gradient(
+          60deg,
+          rgb(47, 183, 179),
+          rgb(42, 100, 194),
+          rgb(194, 39, 78),
+          rgb(191, 22, 22),
+          rgb(192, 163, 16),
+          rgb(187, 193, 8),
+          rgb(74, 193, 15),
+          rgb(10, 186, 77)
+        );
+      }
+    }
 }
 
 /* .........---BACKGROUND---......... */
@@ -170,6 +166,20 @@ body {
   animation: background-moving 25s infinite alternate;
 }
 
+/* .........---SHADOWS---......... */
+
+.shadow {
+  border-radius: 2px;
+  border: 0.1em solid rgb(0, 0, 0);
+  box-shadow: 0.1em 0.1em rgb(201, 26, 108),
+              0.2em 0.2em rgb(0, 0, 0), 
+              0.3em 0.3em rgb(44, 252, 141), 
+              0.4em 0.4em rgb(0, 0, 0), 
+              0.5em 0.5em rgb(71, 73, 183), 
+              0.6em 0.6em rgb(0, 0, 0);
+
+}
+
 /* .........---TEXTOS---......... */
 
 .titulo {
@@ -178,9 +188,13 @@ body {
   text-align: center;
   padding: 1em;
   font-size: 4rem;
-  text-shadow: 1px 1px rgb(0, 0, 0), 2.5px 2.5px rgb(201, 26, 108),
-    4px 4px rgb(0, 0, 0), 5.5px 5.5px rgb(44, 252, 141), 7px 7px rgb(0, 0, 0),
-    8.5px 8.5px rgb(252, 215, 44), 10px 10px rgb(0, 0, 0);
+  text-shadow:  1px 1px rgb(0, 0, 0), 
+                2.5px 2.5px rgb(201, 26, 108),
+                4px 4px rgb(0, 0, 0), 
+                5.5px 5.5px rgb(44, 252, 141), 
+                7px 7px rgb(0, 0, 0),
+                8.5px 8.5px rgb(252, 215, 44), 
+                10px 10px rgb(0, 0, 0);
   letter-spacing: 0.15rem;
   -webkit-text-fill-color: var(--color-primario);
   -webkit-text-stroke-width: 2px;
@@ -188,7 +202,6 @@ body {
   @include mobile {
     padding-top: 1.9em;
     font-size: 2.8rem;
-    text-shadow: 2px 2px rgb(0, 0, 0);
   }
 
   @include tablet {
@@ -209,7 +222,7 @@ body {
 
   &__desarrollo {
     font-size: 3rem;
-    margin: 0.6em 0 0 0;
+    margin-top: 0.6em;
     padding: 0;
   }
 
